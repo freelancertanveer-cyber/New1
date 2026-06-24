@@ -1,52 +1,67 @@
-# Family Office VC-Investor Leads — Sample Deliverable
+# Family Office → VC-Investor Leads — Sample Deliverable (25 leads)
 
-**Target niche:** CEOs / senior executives of **family offices** (Single & Multi-Family Offices) that invest in **Venture Capital funds** as Limited Partners (LPs).
+**Target niche:** CEOs / CIOs / senior investment decision-makers at **family offices** (Single & Multi-Family Offices) that invest in **Venture Capital funds** as Limited Partners (LPs).
 
-This folder contains a **10-lead sample** showing the exact format, depth, and data points the client will receive in the full delivery.
-
-> ⚠️ **Important — these 10 rows are an illustrative sample.**
-> The names, emails, and phone numbers shown are representative placeholders used to demonstrate the column structure and quality bar. In the **paid delivery**, every row is an individually researched, real decision-maker with contact details verified at the point of delivery.
+**File:** `family_office_vc_leads_SAMPLE_25.csv` — open in Excel / Google Sheets.
 
 ---
 
-## What each lead includes (column guide)
+## Why this sample is credible
+
+Every one of the 25 rows is built on a **real, publicly-documented family office** that is known to invest in venture capital — e.g. ICONIQ Capital, Cascade Investment, Emerson Collective, Pritzker Group, BDT & MSD, Hall Capital, Capricorn (Skoll), Soros Fund Management, JRT Partners, Kamet Capital, Pratithi (Kris Gopalakrishnan), Evalue (Thomas Falk), and more — across the **US, Europe, India, UAE and Singapore**.
+
+For each lead you get: the **right decision-maker**, their **title/seniority**, **office type (SFO/MFO)**, **HQ**, **est. AUM**, **proof they invest in VC**, the firm **website**, the **email pattern**, and **personalisation notes**.
+
+> ⚠️ **Honesty note (this protects the client relationship):**
+> - **Firm, person, title, office type, location, AUM band, and VC evidence** are based on public sources and are real.
+> - **Email Pattern** shows the firm's likely address format. It is flagged `Pattern – verify on order`.
+> - **Verified direct email + direct phone** are completed and individually checked **at paid delivery** (column shows `On delivery (verified)`), so the client never sends to a guessed/bouncing address.
+>
+> This is standard for lead-gen samples: the sample proves *targeting + research quality*; the *verified direct contacts* come with the order under a bounce guarantee.
+
+---
+
+## Column guide
 
 | Column | What it gives the client |
 |---|---|
-| **First / Last Name** | The actual decision-maker, not a generic inbox |
-| **Job Title + Seniority** | Confirms C-level / senior-exec targeting (CEO, CIO, Founder, Head of Investments) |
-| **Family Office Name + Office Type** | The entity + whether it's a Single-Family (SFO) or Multi-Family Office (MFO) |
-| **HQ City / Country** | For territory and time-zone segmentation |
-| **Est. AUM (USD)** | Qualifies the lead's ticket-size potential |
-| **Invests in VC Funds + Evidence** | The key qualifier — *proof* they allocate to VC, not a guess |
-| **LinkedIn URL** | For social selling / connection requests |
-| **Work Email + Email Status** | Direct, deliverability-checked (verified / pattern+SMTP / catch-all flagged) |
-| **Direct / Office Phone** | For follow-up calls |
-| **Website** | Firm reference |
-| **Lead Source** | Transparency on where each lead was found |
-| **Notes** | Context to personalise outreach and improve reply rates |
+| First / Last Name | The real investment decision-maker |
+| Job Title + Seniority | Confirms C-level / senior-exec targeting (CEO, CIO, Founder, Managing Partner) |
+| Family Office + Office Type | The entity + Single (SFO) vs Multi-Family (MFO) |
+| HQ City / Country | Territory & time-zone segmentation (global coverage) |
+| Est. AUM (USD) | Ticket-size qualification |
+| Invests in VC Funds + Evidence | **The key qualifier** — proof, not a guess |
+| Company Website | Firm reference / research link |
+| Email Pattern + Email Status | Address format now; verified direct email on delivery |
+| Direct Phone | Verified on delivery |
+| Notes | Context to personalise outreach |
 
 ---
 
-## How leads are sourced & qualified (methodology)
+## Sourcing & QA methodology
 
-1. **Identify** family offices with a documented VC / private-markets allocation
-   (LinkedIn Sales Navigator, PitchBook, Crunchbase, fund LP disclosures, conference speaker lists).
-2. **Find the right person** — CEO, CIO, Founder, or Head of Investments (the actual allocator).
-3. **Verify contact data** — email pattern + SMTP / verification tool; mark deliverability status honestly.
-4. **Add proof of VC interest** — every lead carries evidence (public LP listing, quote, post, panel) so the client isn't cold-pitching the wrong people.
-5. **QA pass** — duplicates removed, titles confirmed current, formatting standardised.
+1. **Identify** family offices with a documented VC / private-markets allocation (LinkedIn Sales Navigator, PitchBook, Crunchbase, press, conference LP lists, fund disclosures).
+2. **Find the right person** — CEO / CIO / Founder / Head of Investments (the actual allocator), not a generic inbox.
+3. **Add proof of VC interest** so the client never cold-pitches the wrong profile.
+4. **Verify contact data** — email pattern + SMTP/verification tool; deliverability status marked honestly.
+5. **QA pass** — dedupe, confirm current titles, standardise formatting.
 
 ---
 
-## Full delivery — what you can offer the client
+## Full delivery options (what to offer the client)
 
-- **Volume:** 50 / 100 / 250 / 500+ leads (your call)
-- **Format:** CSV + Google Sheet (or Excel)
-- **Guarantee:** Bounce-rate cap (e.g. replace any email above an agreed bounce %)
+- **Volume:** 50 / 100 / 250 / 500+ leads
+- **Format:** CSV + Google Sheet / Excel
+- **Verified contacts:** direct email + direct/office phone, individually checked
+- **Bounce guarantee:** any email above an agreed bounce % is replaced free
+- **Custom filters:** geography, AUM band, SFO vs MFO, VC stage (seed / growth), sector tilt (AI, fintech, climate, deep-tech, medtech)
 - **Turnaround:** quoted on volume
-- **Custom filters:** geography, AUM band, SFO vs MFO, VC stage focus (seed / growth), sector tilt (fintech, deep-tech, climate, etc.)
 
-**Files in this sample:**
-- `family_office_vc_leads_SAMPLE.csv` — open in Excel / Google Sheets
-- `README.md` — this guide
+---
+
+### Sources used to build this sample
+- OpenVC — Family Offices directory: https://www.openvc.app/investor-lists/family-offices
+- VC Stack — Family Offices in VC (2025): https://www.vcstack.io/blog/deep-dive-family-offices
+- CNBC — Top 10 family offices for startup investments: https://www.cnbc.com/2024/11/15/top-10-family-offices-startup-investments.html
+- Family Office Advisory — ICONIQ / Cascade profiles: https://family-office-advisory.com
+- The Recursive — Family office CIO on navigating VC: https://therecursive.com/family-office-learnings-from-a-cio-navigating-venture-capital-risk-and-returns/
