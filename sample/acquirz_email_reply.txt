@@ -1,0 +1,12 @@
+Hi Kev,
+
+Yes, we can supply this. We work with live LinkedIn API access, so the profiles are pulled in real-time rather than from old scraped lists. We cover every sector across the UK and have almost every leading professional in the country, so coverage won't be a limitation for you.
+
+All your mandatory fields are covered (profile URL, first name, last name, current job title, current employer), along with the preferred ones - company URL, website, size, industry, seniority, department, city/county/postcode, plus email and phone where available.
+
+Best part: you can check any record yourself against the person's live LinkedIn and it'll match exactly.
+
+I'm pulling together the coverage insights and delivery limits now, and I'll send you a full proposal shortly covering fields, delivery options (API, CSV or SFTP), update frequency, commercials, and compliance, along with a sample sheet and data dictionary so you can see exactly how the data looks. You'll have it well before the 1st July review.
+
+Speak soon,
+Hassan
