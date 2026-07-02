@@ -1,0 +1,509 @@
+<title>MCA Debt Intelligence Pilot · CrackClay for Entrepreneur Capital Corporation</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ground: #FBF8EF;
+    --panel: #F2ECDD;
+    --panel-2: #EDE5D0;
+    --ink: #0E1522;
+    --ink-2: #384156;
+    --meta: #6E6858;
+    --gold: #986E1A;
+    --rule: #D6CDB8;
+    --rule-soft: #E4DBC6;
+  }
+
+  html, body {
+    background: #E6DFCB;
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-feature-settings: "kern", "liga", "onum";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .serif {
+    font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Palatino", Georgia, serif;
+    font-feature-settings: "kern", "liga", "onum";
+  }
+
+  .num { font-variant-numeric: tabular-nums lining-nums; }
+
+  /* -------- slide frame (16:9-ish) -------- */
+  .slide {
+    width: 100%;
+    max-width: 1180px;
+    aspect-ratio: 16 / 10;
+    background: var(--ground);
+    border: 1px solid var(--rule);
+    box-shadow: 0 24px 60px -30px rgba(14, 21, 34, 0.35);
+    padding: 44px 52px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 22px;
+    position: relative;
+  }
+
+  /* -------- top strip -------- */
+  .strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--meta);
+  }
+  .strip .brand {
+    font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .strip .conf {
+    color: var(--gold);
+    letter-spacing: 0.28em;
+  }
+
+  /* -------- title band -------- */
+  .titleband {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: end;
+  }
+  .titleband h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    font-weight: 400;
+    color: var(--ink);
+    text-wrap: balance;
+    letter-spacing: -0.005em;
+  }
+  .titleband .sub {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.5;
+    padding-bottom: 4px;
+  }
+  .titleband .sub .row { display: flex; gap: 10px; }
+  .titleband .sub .row .k {
+    color: var(--meta);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    min-width: 78px;
+    padding-top: 3px;
+    font-weight: 600;
+  }
+  .titleband .sub .row .v { color: var(--ink-2); font-size: 13.5px; }
+  .titleband .sub .row + .row { margin-top: 8px; }
+
+  /* -------- body: two columns -------- */
+  .body {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .roman {
+    font-size: 12px;
+    color: var(--gold);
+    font-style: italic;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+  }
+
+  .h {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .h .t {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+
+  /* -------- offer card -------- */
+  .offer {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--gold);
+    padding: 20px 22px;
+  }
+  .offer .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .offer .cell .label {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--meta);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .offer .cell .val {
+    font-size: 28px;
+    color: var(--ink);
+    line-height: 1.05;
+    margin-top: 4px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .offer .cell.hero .val { color: var(--gold); }
+  .offer .cell .qual {
+    font-size: 11px;
+    color: var(--meta);
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+  }
+  .offer .terms {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--rule);
+    font-size: 12.5px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+
+  /* -------- fields spec -------- */
+  .fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 18px;
+    padding-top: 4px;
+  }
+  .fields .f {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.35;
+  }
+  .fields .f::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .fields .f strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* -------- side panels -------- */
+  .panel-block {
+    background: transparent;
+  }
+  .panel-block p {
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+
+  .radar-line {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-top: 4px;
+  }
+  .radar-line .n {
+    font-size: 32px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+  .radar-line .t {
+    font-size: 12.5px;
+    color: var(--meta);
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+
+  /* -------- about stats -------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule-soft);
+    margin-top: 6px;
+  }
+  .stats .s .n {
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .stats .s .l {
+    margin-top: 6px;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    color: var(--meta);
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  /* -------- onboarding -------- */
+  .steps {
+    display: grid;
+    gap: 5px;
+  }
+  .steps .step {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+  .steps .step .n {
+    font-size: 12.5px;
+    color: var(--gold);
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
+  .steps .step .t strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* -------- footer -------- */
+  .foot {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: end;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+  }
+  .foot .next {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.5;
+    max-width: 60ch;
+  }
+  .foot .next strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .foot .sig {
+    text-align: right;
+  }
+  .foot .sig .who {
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .foot .sig .role {
+    color: var(--ink-2);
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .foot .sig .contact {
+    color: var(--meta);
+    font-size: 11px;
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  /* -------- responsive: on narrow screens, drop the aspect ratio and stack -------- */
+  @media (max-width: 900px) {
+    body { padding: 12px; align-items: flex-start; }
+    .slide {
+      aspect-ratio: auto;
+      padding: 28px 22px;
+      gap: 20px;
+    }
+    .titleband {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .titleband h1 { font-size: 30px; }
+    .body {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+    .offer .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .offer .cell .val { font-size: 24px; }
+    .fields { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .foot {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .foot .sig { text-align: left; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .slide { box-shadow: none; border: none; max-width: none; }
+  }
+</style>
+
+<section class="slide">
+
+  <div class="strip">
+    <span class="brand">CrackClay</span>
+    <span class="conf">Private &amp; confidential</span>
+    <span>02 July 2026</span>
+  </div>
+
+  <div class="titleband">
+    <h1 class="serif">The buyers your program was built to reach.</h1>
+    <div class="sub">
+      <div class="row">
+        <div class="k">Prepared for</div>
+        <div class="v">Bruce Blechman, President &amp; CEO<br>Entrepreneur Capital Corporation</div>
+      </div>
+      <div class="row">
+        <div class="k">Scope</div>
+        <div class="v">One-week pilot: 1,000 US operators actively carrying $300,000+ in MCA debt.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="col">
+
+      <div>
+        <div class="h">
+          <span class="roman serif">I.</span>
+          <span class="t serif">Pilot cohort &amp; commercials.</span>
+        </div>
+        <div class="offer">
+          <div class="grid">
+            <div class="cell">
+              <div class="label">Volume</div>
+              <div class="val num serif">1,000</div>
+              <div class="qual">records</div>
+            </div>
+            <div class="cell">
+              <div class="label">Per record</div>
+              <div class="val num serif">$5</div>
+              <div class="qual">flat</div>
+            </div>
+            <div class="cell hero">
+              <div class="label">Pilot fee</div>
+              <div class="val num serif">$5,000</div>
+              <div class="qual">total</div>
+            </div>
+            <div class="cell">
+              <div class="label">Delivery</div>
+              <div class="val num serif">7</div>
+              <div class="qual">days from kickoff</div>
+            </div>
+          </div>
+          <div class="terms">
+            Payment: 50 percent on contract signing, 50 percent on delivery. Net-14 on both invoices. Monthly cadence and volume tiers open after the pilot lands.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="h">
+          <span class="roman serif">II.</span>
+          <span class="t serif">Fields delivered per record.</span>
+        </div>
+        <div class="fields">
+          <div class="f"><span><strong>Company name</strong> · registered US name</span></div>
+          <div class="f"><span><strong>Company domain</strong> · primary web domain</span></div>
+          <div class="f"><span><strong>Decision maker</strong> · finance leadership or C-level</span></div>
+          <div class="f"><span><strong>Registered address</strong> · street, city, state, ZIP</span></div>
+          <div class="f"><span><strong>Business phone</strong> · direct line where available</span></div>
+          <div class="f"><span><strong>Verified work email</strong> · multi-tool verified</span></div>
+          <div class="f"><span><strong>MCA debt band</strong> · $300,000 or higher</span></div>
+          <div class="f"><span><strong>Delivery format</strong> · CSV or shared Google Sheet</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col">
+
+      <div class="panel-block">
+        <div class="h">
+          <span class="roman serif">III.</span>
+          <span class="t serif">The radar.</span>
+        </div>
+        <p>Roughly 5,000 US companies matching your criteria sit in our active pool. Merchant debt and financial statements shift monthly, so this pool refreshes on a rolling basis rather than staying static.</p>
+        <div class="radar-line">
+          <span class="n num serif">~5,000</span>
+          <span class="t">qualifying companies in current radar. Refreshed monthly, so the pilot cohort ships from a live pool, not a stale export.</span>
+        </div>
+      </div>
+
+      <div class="panel-block">
+        <div class="h">
+          <span class="roman serif">IV.</span>
+          <span class="t serif">About CrackClay.</span>
+        </div>
+        <p>Five-person team, eight years in the market. Deep manual research on enterprise-grade funding and filings data. We also run campaigns end to end, so the sourcing is tested against the outreach layer, not just built to look good on a spreadsheet. Modern automation and language models layered on cleaning.</p>
+        <div class="stats">
+          <div class="s"><div class="n num serif">8</div><div class="l">Years in market</div></div>
+          <div class="s"><div class="n num serif">5</div><div class="l">Team members</div></div>
+          <div class="s"><div class="n num serif">1,200+</div><div class="l">Projects delivered</div></div>
+          <div class="s"><div class="n num serif">70%</div><div class="l">Decision-maker hit rate</div></div>
+        </div>
+      </div>
+
+      <div class="panel-block">
+        <div class="h">
+          <span class="roman serif">V.</span>
+          <span class="t serif">Onboarding.</span>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="n serif">i.</span><span class="t"><strong>Contract package sent</strong> with mutual NDA and data protection clause.</span></div>
+          <div class="step"><span class="n serif">ii.</span><span class="t"><strong>50 percent deposit received.</strong> Work begins on receipt.</span></div>
+          <div class="step"><span class="n serif">iii.</span><span class="t"><strong>Kickoff call.</strong> Criteria locked, delivery window confirmed.</span></div>
+          <div class="step"><span class="n serif">iv.</span><span class="t"><strong>Delivery within 7 days.</strong> CSV or shared Google Sheet.</span></div>
+          <div class="step"><span class="n serif">v.</span><span class="t"><strong>48-hour review.</strong> Off-spec records replaced free before balance is invoiced.</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <div class="next">
+      <strong>Next step.</strong> Reply on the email thread with subject "we just talked", as we agreed on the call. The contract package goes out the same day. Once the NDA is signed and the deposit lands, the pilot cohort is in your inbox within seven days.
+    </div>
+    <div class="sig">
+      <div class="who serif">Tanveer Ul Hassan</div>
+      <div class="role">Founder, CrackClay</div>
+      <div class="contact">tanveer@crackclay.co · crackclay.co</div>
+    </div>
+  </div>
+
+</section>
