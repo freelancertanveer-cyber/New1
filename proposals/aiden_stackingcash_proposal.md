@@ -1,7 +1,8 @@
 # Cold Email + Google Maps Data System
-## Proposal for Lisa Berry — Non-Captive Life Insurance Agent Outbound
+## Proposal for Aiden, Stacking Cash — Non-Captive Life Insurance Agent Outbound
 
 **From:** Hassan, CrackClay
+**To:** Aiden, Stacking Cash (stacking.cash)
 **Date:** July 17, 2026
 **Prepared after:** July 16 discovery call
 
