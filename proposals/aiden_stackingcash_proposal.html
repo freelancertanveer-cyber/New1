@@ -1,7 +1,6 @@
 <meta charset="utf-8">
 <title>CrackClay — Aiden, Stacking Cash</title>
 <style>
-  @import url('data:text/css;charset=utf-8,');
   :root {
     --paper: #FBF6EA;
     --paper-soft: #F5EFDF;
@@ -27,8 +26,6 @@
     margin: 0 auto;
     padding: 40px 52px 50px;
   }
-
-  /* header */
   .brand-row {
     display: flex;
     align-items: center;
@@ -54,7 +51,6 @@
     text-transform: uppercase;
     color: var(--ink-mute);
   }
-
   .kicker-pill {
     display: inline-block;
     padding: 6px 14px;
@@ -88,8 +84,6 @@
     font-style: italic;
     margin-bottom: 26px;
   }
-
-  /* marquee strip */
   .marquee {
     background: #0F0D0A;
     color: #FBF6EA;
@@ -101,8 +95,6 @@
     font-family: Georgia, serif;
   }
   .marquee .dot { color: var(--accent); margin: 0 12px; }
-
-  /* section header pattern from website */
   .section {
     display: grid;
     grid-template-columns: 160px 1fr;
@@ -111,9 +103,7 @@
     border-top: 1px solid var(--rule);
   }
   .section:first-of-type { border-top: 1.5px solid var(--ink); }
-  .section .left {
-    font-family: Georgia, serif;
-  }
+  .section .left { font-family: Georgia, serif; }
   .section .num {
     font-size: 32px;
     color: var(--rule);
@@ -140,13 +130,11 @@
     color: var(--ink-body);
     margin: 6px 0;
   }
-  .section .right p em, .section .right em {
+  .section .right em {
     color: var(--accent);
     font-style: italic;
   }
   .section .right strong { color: var(--ink); }
-
-  /* card row */
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -187,8 +175,6 @@
     margin: 0;
     line-height: 1.5;
   }
-
-  /* budget list */
   .budget {
     background: var(--paper-soft);
     border-radius: 10px;
@@ -205,8 +191,6 @@
   }
   .budget-row:last-child { border-bottom: none; font-weight: 700; color: var(--ink); }
   .budget-row .name em { color: var(--ink-mute); font-style: normal; font-size: 12px; }
-
-  /* pullquote */
   .pullquote {
     font-family: Georgia, serif;
     font-style: italic;
@@ -224,8 +208,6 @@
     margin-top: 10px;
     letter-spacing: 0.05em;
   }
-
-  /* timeline */
   .timeline {
     display: grid;
     grid-template-columns: 90px 1fr;
@@ -239,8 +221,6 @@
     color: var(--accent);
   }
   .timeline .d { color: var(--ink-body); }
-
-  /* CTA */
   .cta-row {
     display: flex;
     align-items: center;
@@ -269,7 +249,6 @@
     text-decoration: none;
     letter-spacing: 0.02em;
   }
-
   footer {
     margin-top: 32px;
     padding-top: 18px;
@@ -287,12 +266,12 @@
 
   <div class="brand-row">
     <div class="brand">CrackClay</div>
-    <div class="meta-strip">One Page · Personalized · For Aiden, Stacking Cash</div>
+    <div class="meta-strip">For Aiden, Stacking Cash</div>
   </div>
 
   <span class="kicker-pill">Outbound Infrastructure</span>
-  <h1>Not a proposal deck. <span class="accent">Just what I'd actually do.</span></h1>
-  <div class="subline">Based on our July 16 call. For Aiden, Stacking Cash (stacking.cash). From Hassan, CrackClay.</div>
+  <h1>Not a formal proposal. <span class="accent">Just what I'd do if we work together.</span></h1>
+  <div class="subline">Based on our call. Hassan, CrackClay.</div>
 
   <div class="marquee">
     100k sends a month <span class="dot">◆</span> Anti-retainer pricing <span class="dot">◆</span> 15M+ records delivered <span class="dot">◆</span> Person-level emails, not info@
@@ -301,35 +280,46 @@
   <div class="section">
     <div class="left">
       <div class="num">01</div>
-      <div class="kicker">Your Situation</div>
+      <div class="kicker">Where you're at</div>
     </div>
     <div class="right">
-      <h2>You're building the sales platform for insurance reps.</h2>
-      <p>Non-captive life insurance is the starting ICP. Meta already works cause your ICP lives on Instagram and TikTok. You want LinkedIn and cold email as new channels. You ran a GTM Engineer ad, going through interviews, this is one of those conversations.</p>
-      <p>Our edge is we're in non-captive space, we <em>are</em> insurance shop. We talk more on customer needs rather than pitch a single policy. So the response will be massive on no-pressure copy. Just an option-exploring angle peaks curiosity and opens doors for convo.</p>
+      <h2>You want LinkedIn and cold email as new channels.</h2>
+      <p>You're building the sales platform for insurance reps. Non-captive is the starting ICP. Meta already works cause your people live on IG and TikTok. Now you want two new channels open.</p>
+      <p>You ran a GTM Engineer ad, going through interviews, this is one of those calls.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="left">
       <div class="num">02</div>
-      <div class="kicker">On Compliance</div>
+      <div class="kicker">Why this angle wins</div>
     </div>
     <div class="right">
-      <h2>Cold email in the US is <em>gray, not illegal.</em></h2>
-      <p>I get it, you sit in SaaS compliance yourself. CAN-SPAM is basically sender identity + unsubscribe + no misleading subject. We follow that. GDPR is not on us cause we don't touch Europe.</p>
-      <p>The FTC/FBI angle you mentioned is real to watch but nothing on it is landing in the outbound communities I'm in yet. If your internal bar is stricter than the norm, tell me, we'll match it.</p>
+      <h2>We're not pitching a policy. We're an <em>insurance shop.</em></h2>
+      <p>The edge is we talk customer needs, not sell one policy. Non-captive space, so we can lay out options. That copy peaks curiosity, opens the door for convo without pressure. Big reply spike comes from that.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="left">
       <div class="num">03</div>
-      <div class="kicker">How I Actually Run This</div>
+      <div class="kicker">Compliance</div>
     </div>
     <div class="right">
-      <h2>Two-month test phase first. <em>Speed to signal.</em></h2>
-      <p>I don't want to burn your money on infrastructure warmup for 3 weeks and then discover the offer doesn't resonate. So we skip that. Campaigns go live in 4-5 days instead of 14-20.</p>
+      <h2>Cold email in the US is <em>gray. Not illegal.</em></h2>
+      <p>I get it, you sit in SaaS compliance yourself. CAN-SPAM is basically sender identity plus unsubscribe plus no misleading subject. We do all that. GDPR isnt on us cause we dont touch Europe.</p>
+      <p>The FTC angle you mentioned is worth watching but nothing on it is landing in the outbound communities Im in yet. If your internal bar is stricter tell me, well match it.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="left">
+      <div class="num">04</div>
+      <div class="kicker">How I actually run this</div>
+    </div>
+    <div class="right">
+      <h2>Two month test first. <em>Speed to signal.</em></h2>
+      <p>I dont want to burn your money warming infra for 3 weeks and then find the offer doesnt hit. Skip that whole phase. Campaigns go live in 4-5 days instead of 14-20.</p>
     </div>
   </div>
 
@@ -338,26 +328,26 @@
       <div class="cnum">01</div>
       <div class="clabel">Inboxes</div>
       <div class="ctitle">Pre-warmed mailboxes, $1.50 each</div>
-      <p>250 mailboxes for 100k+ sends/mo. Sender domains redirect to stacking.cash. When a lead replies we CC your main mailbox so leads hit your team from day one, not sitting in some pre-warmed inbox we control.</p>
+      <p>250 mailboxes for 100k+ sends a month. Sender domains redirect to stacking.cash. When a lead replies we CC your main mailbox so leads hit your team from day 1. Not stuck in some inbox we control.</p>
     </div>
     <div class="card">
       <div class="cnum">02</div>
-      <div class="clabel">Data (my moat)</div>
+      <div class="clabel">Data · my moat</div>
       <div class="ctitle">Google Maps scraping, owner inboxes</div>
-      <p>My brother runs this exact play for an insurance client at 3M sends/mo. The data does not sit in Apollo, ZoomInfo, or Cognism. This is my secret sauce to hit owners direct. Outbound teams rely on traditional databases and get hit by 10 other competitors on the same list.</p>
+      <p>My brother runs this exact play for an insurance client at 3M sends a month. Data doesnt sit in Apollo, ZoomInfo, Cognism. Thats how we hit owner inboxes direct. Outbound teams stuck on those databases are getting hit by 10 competitors on the same list.</p>
     </div>
     <div class="card">
       <div class="cnum">03</div>
       <div class="clabel">Automation</div>
       <div class="ctitle">Claude Code + MCP, not Clay</div>
-      <p>Clay makes you dependent on one operator and slows you down manually clicking tables. Claude Code lets us test tens of angles in parallel. Your team gets a seat and can chat with the system directly to tweak angles, pull reports, whatever.</p>
+      <p>Clay makes you dependent on one operator and its slow, manual click through tables. Claude Code lets us test tens of angles in parallel. Your team gets a seat, can chat with the system, tweak angles, pull reports.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="left">
-      <div class="num">04</div>
-      <div class="kicker">Tech Budget · Monthly</div>
+      <div class="num">05</div>
+      <div class="kicker">Tech budget · monthly</div>
     </div>
     <div class="right">
       <div class="budget">
@@ -365,40 +355,40 @@
         <div class="budget-row"><span class="name">PlusVibe <em>· cheapest sequencer</em></span><span>$97</span></div>
         <div class="budget-row"><span class="name">Instantly <em>· widely used</em></span><span>$358</span></div>
         <div class="budget-row"><span class="name">Smartlead <em>· highly recommended</em></span><span>$174</span></div>
-        <div class="budget-row"><span class="name">Claude Code seat <em>· you likely already have one</em></span><span>~$100</span></div>
+        <div class="budget-row"><span class="name">Claude Code seat <em>· you likely have one, just add me</em></span><span>~$100</span></div>
         <div class="budget-row"><span class="name">Google Maps extraction <em>· on me</em></span><span>included</span></div>
         <div class="budget-row"><span class="name">Total (with Smartlead)</span><span>~$680/mo</span></div>
       </div>
-      <p style="font-size:12.5px; color: var(--ink-mute); margin-top:8px;">All accounts in your name. If we part ways, everything stays with you.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="left">
-      <div class="num">05</div>
-      <div class="kicker">My Fee</div>
-    </div>
-    <div class="right">
-      <h2><em>$1,700/mo</em> for the 2-month test.</h2>
-      <p>We start action from week one. The picture gets cleared in a month when the first sequence completes. If we need more sequences we launch them. Covers list building (our special moat, nobody does this due to complex operations), copy, campaign setup, running the angle tests, weekly reports, reply routing, all of it.</p>
-      <p>After 2 months, if we found a winner, we move to retainer. Rough range <strong>$3,000-5,000/mo</strong> depending on volume. If we didn't find a winner, you still keep everything. No lock-in.</p>
+      <p style="font-size:12.5px; color: var(--ink-mute); margin-top:8px;">All accounts in your name. If we part ways nothing walks with me.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="left">
       <div class="num">06</div>
-      <div class="kicker">Weekly Rhythm</div>
+      <div class="kicker">My fee</div>
     </div>
     <div class="right">
-      <p><strong>3-5k contacts added.</strong> 20-30k sends. Friday report on what converted and what to test next.</p>
+      <h2><em>$1,700/mo</em> for the 2 month test.</h2>
+      <p>We start action from week 1. Picture gets clear in a month once the first sequence completes. If we need more sequences we launch them. Covers list building (my moat, hard to do at scale), copy, campaign setup, angle tests, weekly reports, reply routing, all of it.</p>
+      <p>After 2 months if we found a winner we move to retainer. Rough <strong>$3,000-5,000/mo</strong> depending on volume. If we didnt find a winner you still keep everything. No lock in.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="left">
       <div class="num">07</div>
-      <div class="kicker">Realistic Timeline</div>
+      <div class="kicker">Weekly rhythm</div>
+    </div>
+    <div class="right">
+      <p><strong>3-5k contacts added. 20-30k sends. Friday report</strong> on what converted and what to test next.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="left">
+      <div class="num">08</div>
+      <div class="kicker">Timeline</div>
     </div>
     <div class="right">
       <div class="timeline">
@@ -407,35 +397,35 @@
         <div class="t">Day 5-7</div><div class="d">First campaigns live</div>
         <div class="t">Week 2</div><div class="d">First angle iteration</div>
         <div class="t">Week 4</div><div class="d">Second round of tests</div>
-        <div class="t">Week 8</div><div class="d">Winner identified → Phase 2 scope, or clean no-go call</div>
+        <div class="t">Week 8</div><div class="d">Winner found → Phase 2 scope, or clean no-go call</div>
       </div>
     </div>
   </div>
 
   <div class="section">
     <div class="left">
-      <div class="num">08</div>
-      <div class="kicker">Team Backing You</div>
+      <div class="num">09</div>
+      <div class="kicker">Team behind me</div>
     </div>
     <div class="right">
-      <p>I work on a <strong>results approach</strong>, not a freelancer hourly bill. We meet deadlines when we have a team on backend. So I have <strong>one campaign guy + two data guys</strong> who will extract for you.</p>
-      <p>Also owing you from the call: landing page of the offer (<a href="https://crackclay.co/campaigns" style="color: var(--accent); font-style: italic;">crackclay.co/campaigns</a>), a couple client results, and I'll add you to the cold email mastermind community I mentioned.</p>
+      <p>I work <strong>results approach</strong>, not freelancer hourly bill. We hit deadlines cause I have a team on backend. <strong>One campaign guy, two data guys</strong> extracting for you.</p>
+      <p>Also owing you from the call. Landing page here <a href="https://crackclay.co/campaigns" style="color: var(--accent); font-style: italic;">crackclay.co/campaigns</a>. A couple client results coming. And Ill add you to the cold email mastermind community I mentioned.</p>
     </div>
   </div>
 
   <div class="pullquote">
     "The harder the contact is to reach, the better the outreach performs."
-    <span class="attr">— Alex Hormozi · the principle we're built on</span>
+    <span class="attr">Alex Hormozi · the principle we're built on</span>
   </div>
 
   <div class="section" style="border-top:1.5px solid var(--ink);">
     <div class="left">
-      <div class="num">09</div>
-      <div class="kicker">Next Step</div>
+      <div class="num">10</div>
+      <div class="kicker">Next step</div>
     </div>
     <div class="right">
-      <h2>Say yes. I queue mailbox provisioning <em>this weekend.</em></h2>
-      <p>If there's something off tell me and I'll adjust before we start.</p>
+      <h2>Say yes. Ill queue mailbox provisioning <em>this weekend.</em></h2>
+      <p>If somethings off tell me and Ill adjust before we start.</p>
       <div class="cta-row">
         <a class="btn-primary" href="#">Say Yes</a>
         <a class="btn-dark" href="#">Send a Redline</a>
