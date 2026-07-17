@@ -1,13 +1,15 @@
 <meta charset="utf-8">
-<title>Stacking Cash × CrackClay Proposal</title>
+<title>CrackClay — Aiden, Stacking Cash</title>
 <style>
+  @import url('data:text/css;charset=utf-8,');
   :root {
-    --ink: #1a1a1a;
-    --ink-soft: #4a4a4a;
-    --paper: #ffffff;
-    --paper-tint: #f7f4ee;
-    --rule: #d9d3c4;
-    --accent: #b26b1a;
+    --paper: #FBF6EA;
+    --paper-soft: #F5EFDF;
+    --ink: #1E1B16;
+    --ink-body: #4A4237;
+    --ink-mute: #857A66;
+    --accent: #E97A2E;
+    --rule: #D9CFB8;
   }
   * { box-sizing: border-box; }
   html, body {
@@ -15,221 +17,439 @@
     padding: 0;
     background: var(--paper);
     color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
-    font-size: 14px;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 13.5px;
     line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
   }
   .page {
     max-width: 780px;
     margin: 0 auto;
-    padding: 44px 56px 52px;
+    padding: 40px 52px 50px;
   }
-  header {
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 20px;
-    margin-bottom: 28px;
+
+  /* header */
+  .brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
   }
-  header .kicker {
-    font-size: 11px;
-    letter-spacing: 0.16em;
+  .brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .brand::before {
+    content: "◉";
+    color: var(--accent);
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  .meta-strip {
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  .kicker-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  h1 .accent {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .subline {
+    font-size: 13px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-bottom: 26px;
+  }
+
+  /* marquee strip */
+  .marquee {
+    background: #0F0D0A;
+    color: #FBF6EA;
+    padding: 10px 20px;
+    margin: 24px -52px 32px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    font-family: Georgia, serif;
+  }
+  .marquee .dot { color: var(--accent); margin: 0 12px; }
+
+  /* section header pattern from website */
+  .section {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 26px;
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .section:first-of-type { border-top: 1.5px solid var(--ink); }
+  .section .left {
+    font-family: Georgia, serif;
+  }
+  .section .num {
+    font-size: 32px;
+    color: var(--rule);
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .section .kicker {
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 8px;
+    font-weight: 700;
   }
-  header h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0;
-    letter-spacing: -0.01em;
-  }
-  header .sub {
+  .section .right h2 {
     font-family: Georgia, serif;
-    font-size: 17px;
-    color: var(--ink-soft);
-    margin-top: 8px;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .section .right p {
+    color: var(--ink-body);
+    margin: 6px 0;
+  }
+  .section .right p em, .section .right em {
+    color: var(--accent);
     font-style: italic;
   }
-  header .meta {
-    font-size: 12px;
-    color: var(--ink-soft);
-    margin-top: 14px;
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
+  .section .right strong { color: var(--ink); }
+
+  /* card row */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 22px 0;
   }
-  h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 30px 0 12px;
-    color: var(--ink);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 6px;
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 16px 16px 18px;
   }
-  h3 {
-    font-size: 13px;
-    font-weight: 700;
+  .card .cnum {
+    font-family: Georgia, serif;
+    color: var(--rule);
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .card .clabel {
+    font-size: 10px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: var(--accent);
-    margin: 20px 0 6px;
-  }
-  p { margin: 8px 0; }
-  ul, ol { margin: 8px 0 8px 22px; padding: 0; }
-  ul li, ol li { margin: 4px 0; }
-  strong { color: var(--ink); }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px 0;
-    font-size: 13px;
-  }
-  table th {
-    text-align: left;
-    padding: 7px 10px;
-    border-bottom: 1.5px solid var(--ink);
-    background: var(--paper-tint);
-    font-weight: 600;
-  }
-  table td {
-    padding: 6px 10px;
-    border-bottom: 1px solid var(--rule);
-  }
-  table tr:last-child td {
     font-weight: 700;
-    background: var(--paper-tint);
+    margin: 8px 0 6px;
   }
-  .callout {
-    background: var(--paper-tint);
-    border-left: 3px solid var(--accent);
-    padding: 12px 16px;
-    margin: 14px 0;
-    font-size: 13.5px;
+  .card .ctitle {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 8px;
+    line-height: 1.25;
   }
-  hr {
-    border: none;
-    border-top: 1px solid var(--rule);
-    margin: 32px 0 22px;
+  .card p {
+    font-size: 12.5px;
+    color: var(--ink-body);
+    margin: 0;
+    line-height: 1.5;
   }
-  footer {
+
+  /* budget list */
+  .budget {
+    background: var(--paper-soft);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 12px 0 6px;
+  }
+  .budget-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
     font-size: 13px;
-    color: var(--ink-soft);
-    margin-top: 28px;
-    border-top: 1px solid var(--rule);
-    padding-top: 14px;
+    color: var(--ink-body);
   }
-  footer strong { color: var(--ink); font-size: 14px; }
+  .budget-row:last-child { border-bottom: none; font-weight: 700; color: var(--ink); }
+  .budget-row .name em { color: var(--ink-mute); font-style: normal; font-size: 12px; }
+
+  /* pullquote */
+  .pullquote {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 28px 0 8px;
+  }
+  .pullquote .attr {
+    display: block;
+    font-family: -apple-system, Segoe UI, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  /* timeline */
+  .timeline {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 8px 18px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .timeline .t {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .timeline .d { color: var(--ink-body); }
+
+  /* CTA */
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0 0;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-family: -apple-system, Segoe UI, Helvetica, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .btn-dark {
+    background: #0F0D0A;
+    color: #FBF6EA;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-family: -apple-system, Segoe UI, Helvetica, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  footer {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1.5px solid var(--ink);
+    font-family: -apple-system, Segoe UI, Helvetica, sans-serif;
+    font-size: 12px;
+    color: var(--ink-mute);
+    display: flex;
+    justify-content: space-between;
+  }
+  footer strong { color: var(--ink); font-size: 13px; }
 </style>
 
 <div class="page">
-  <header>
-    <div class="kicker">Stacking Cash × CrackClay</div>
-    <h1>LinkedIn + Cold Email as a New GTM Channel</h1>
-    <div class="sub">For Non-Captive Life Insurance Agents — 2-Month Test to Retainer</div>
-    <div class="meta">
-      <span>Prepared for: Aiden, Stacking Cash (stacking.cash)</span>
-      <span>Prepared by: Hassan, CrackClay</span>
-      <span>Date: July 17, 2026</span>
+
+  <div class="brand-row">
+    <div class="brand">CrackClay</div>
+    <div class="meta-strip">One Page · Personalized · For Aiden, Stacking Cash</div>
+  </div>
+
+  <span class="kicker-pill">Outbound Infrastructure</span>
+  <h1>Not a proposal deck. <span class="accent">Just what I'd actually do.</span></h1>
+  <div class="subline">Based on our July 16 call. For Aiden, Stacking Cash (stacking.cash). From Hassan, CrackClay.</div>
+
+  <div class="marquee">
+    100k sends a month <span class="dot">◆</span> Anti-retainer pricing <span class="dot">◆</span> 15M+ records delivered <span class="dot">◆</span> Person-level emails, not info@
+  </div>
+
+  <div class="section">
+    <div class="left">
+      <div class="num">01</div>
+      <div class="kicker">Your Situation</div>
     </div>
-  </header>
-
-  <h2>What I Heard on the Call</h2>
-  <p>You're building the sales platform for insurance reps. Product side is solid: dialer, CRM, tools, everything on top of the rep's operation. Mission is to create more entrepreneurs and help them succeed as the tech landscape shifts.</p>
-  <p>Right now the ICP is non-captive life insurance agents in the US. 1099 contractors running their own brokerages, MLM structure. They earn commission on their own policy sales, on downline recruit sales, and on recruiting bonuses. Two-sided customer base: consumers they sell to, and reps they recruit. Product mix is whole life (final expense, ~$1k/mo, savings-account style) and term life (~$100/mo pure protection). Distinguishing them from captive agents (Global Life, Primerica, etc.) is the hard filter, and LinkedIn Sales Nav alone doesn't do it.</p>
-  <p>The channel picture: Meta is already working since your ICP lives on Instagram and TikTok. You want LinkedIn and cold email opened as new sources of pipeline and downline recruits. You ran a GTM Engineer ad and are running interviews to lead this.</p>
-
-  <div class="callout">
-    <strong>Your explicit concerns:</strong>
-    <ol>
-      <li><strong>Compliance.</strong> You operate in SaaS compliance yourself. US is quietly pushing enforcement (FTC/FBI fingerprinting, evidence build, 2026-2027 fines). Outbound needs to stay inside common US practice.</li>
-      <li><strong>Speed and burn.</strong> If a channel doesn't work, no crisis. But you don't want to waste months in warmup and setup.</li>
-      <li><strong>Ownership.</strong> Anything we build should be yours. If we part ways, nothing walks with me.</li>
-    </ol>
+    <div class="right">
+      <h2>You're building the sales platform for insurance reps.</h2>
+      <p>Non-captive life insurance is the starting ICP. Meta already works cause your ICP lives on Instagram and TikTok. You want LinkedIn and cold email as new channels. You ran a GTM Engineer ad, going through interviews, this is one of those conversations.</p>
+      <p>Our edge is we're in non-captive space, we <em>are</em> insurance shop. We talk more on customer needs rather than pitch a single policy. So the response will be massive on no-pressure copy. Just an option-exploring angle peaks curiosity and opens doors for convo.</p>
+    </div>
   </div>
 
-  <p>Roadmap-wise, non-captive insurance is the deep-first niche. You'll broaden later to high-ticket sales, info agencies, AI agencies, recruitment agencies. Whatever we build for insurance should be portable to the next niche.</p>
-
-  <h2>What I'm Proposing</h2>
-  <p>A 2-month test phase with rigorous angle testing, followed by a retainer once we find message-market fit. Focus is speed to signal, not perfection of setup.</p>
-
-  <h3>Phase 1 — Test (Months 1-2)</h3>
-
-  <p><strong>Data</strong></p>
-  <ul>
-    <li>Google Maps extraction for non-captive agent contacts. My brother's team runs the same play for a similar client at 3M sends/mo. The data does not sit in Apollo, ZoomInfo, or Cognism, so you are not fighting for the same inboxes as every other outbound team.</li>
-    <li>Enrichment logic to filter captive vs non-captive. Captive companies get excluded upfront.</li>
-  </ul>
-
-  <p><strong>Infrastructure</strong></p>
-  <ul>
-    <li>270 pre-warmed mailboxes at $1.50/inbox/mo</li>
-    <li>Live campaigns in 4-5 days instead of 14-20 days manual warmup</li>
-    <li>Sender domains redirect to stacking.cash</li>
-    <li>BCC your main mailbox on replies. Leads land in your team's inbox from Day 1.</li>
-  </ul>
-
-  <p><strong>Automation</strong></p>
-  <ul>
-    <li>Claude Code + MCP driving the sequencer</li>
-    <li>Angle testing runs in parallel: audience slices, copy versions, offers. Tens of variations without the manual click-through Clay operators charge for.</li>
-    <li>You get a Claude Code seat. Your team can chat with the system directly, generate reports, tweak angles.</li>
-  </ul>
-
-  <div class="callout">
-    <strong>Weekly output:</strong> 3-5k verified non-captive agent contacts, 20-30k sends, replies routed via BCC, Friday report on what's converting and next test to run.
+  <div class="section">
+    <div class="left">
+      <div class="num">02</div>
+      <div class="kicker">On Compliance</div>
+    </div>
+    <div class="right">
+      <h2>Cold email in the US is <em>gray, not illegal.</em></h2>
+      <p>I get it, you sit in SaaS compliance yourself. CAN-SPAM is basically sender identity + unsubscribe + no misleading subject. We follow that. GDPR is not on us cause we don't touch Europe.</p>
+      <p>The FTC/FBI angle you mentioned is real to watch but nothing on it is landing in the outbound communities I'm in yet. If your internal bar is stricter than the norm, tell me, we'll match it.</p>
+    </div>
   </div>
 
-  <h3>Phase 2 — Scale (Month 3+)</h3>
-  <p>Once we find a winning angle, transition to retainer. Move to owned domains and inboxes if you want, or keep pre-warmed for pace. You own the infrastructure either way.</p>
+  <div class="section">
+    <div class="left">
+      <div class="num">03</div>
+      <div class="kicker">How I Actually Run This</div>
+    </div>
+    <div class="right">
+      <h2>Two-month test phase first. <em>Speed to signal.</em></h2>
+      <p>I don't want to burn your money on infrastructure warmup for 3 weeks and then discover the offer doesn't resonate. So we skip that. Campaigns go live in 4-5 days instead of 14-20.</p>
+    </div>
+  </div>
 
-  <h2>Tech Stack + Budget (Phase 1)</h2>
-  <table>
-    <tr><th>Item</th><th>Provider</th><th>Monthly cost</th></tr>
-    <tr><td>Pre-warmed mailboxes (270)</td><td>Vendor</td><td>~$405</td></tr>
-    <tr><td>Sequencer (Instantly, Smartlead, or PlusVibe)</td><td>Your account</td><td>$97-197</td></tr>
-    <tr><td>Google Maps data extraction</td><td>CrackClay-run</td><td>included</td></tr>
-    <tr><td>Email verification</td><td>Your account</td><td>~$50</td></tr>
-    <tr><td>Claude Code seat</td><td>Your account</td><td>~$100</td></tr>
-    <tr><td>Total tech budget</td><td></td><td>~$650-750/mo</td></tr>
-  </table>
-  <p style="font-size:13px; color:var(--ink-soft);">Every account is in your name. If we part ways, everything stays with you.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="cnum">01</div>
+      <div class="clabel">Inboxes</div>
+      <div class="ctitle">Pre-warmed mailboxes, $1.50 each</div>
+      <p>250 mailboxes for 100k+ sends/mo. Sender domains redirect to stacking.cash. When a lead replies we CC your main mailbox so leads hit your team from day one, not sitting in some pre-warmed inbox we control.</p>
+    </div>
+    <div class="card">
+      <div class="cnum">02</div>
+      <div class="clabel">Data (my moat)</div>
+      <div class="ctitle">Google Maps scraping, owner inboxes</div>
+      <p>My brother runs this exact play for an insurance client at 3M sends/mo. The data does not sit in Apollo, ZoomInfo, or Cognism. This is my secret sauce to hit owners direct. Outbound teams rely on traditional databases and get hit by 10 other competitors on the same list.</p>
+    </div>
+    <div class="card">
+      <div class="cnum">03</div>
+      <div class="clabel">Automation</div>
+      <div class="ctitle">Claude Code + MCP, not Clay</div>
+      <p>Clay makes you dependent on one operator and slows you down manually clicking tables. Claude Code lets us test tens of angles in parallel. Your team gets a seat and can chat with the system directly to tweak angles, pull reports, whatever.</p>
+    </div>
+  </div>
 
-  <h2>Service Fee</h2>
-  <p><strong>Phase 1:</strong> $1,700/mo × 2 months. Covers list building, copy, campaign setup, angle testing, reporting, reply routing.</p>
-  <p><strong>Phase 2 retainer:</strong> scoped after Phase 1. Rough range $2,500-4,000/mo depending on send volume and inbox count.</p>
+  <div class="section">
+    <div class="left">
+      <div class="num">04</div>
+      <div class="kicker">Tech Budget · Monthly</div>
+    </div>
+    <div class="right">
+      <div class="budget">
+        <div class="budget-row"><span class="name">250 pre-warmed mailboxes</span><span>~$405</span></div>
+        <div class="budget-row"><span class="name">PlusVibe <em>· cheapest sequencer</em></span><span>$97</span></div>
+        <div class="budget-row"><span class="name">Instantly <em>· widely used</em></span><span>$358</span></div>
+        <div class="budget-row"><span class="name">Smartlead <em>· highly recommended</em></span><span>$174</span></div>
+        <div class="budget-row"><span class="name">Claude Code seat <em>· you likely already have one</em></span><span>~$100</span></div>
+        <div class="budget-row"><span class="name">Google Maps extraction <em>· on me</em></span><span>included</span></div>
+        <div class="budget-row"><span class="name">Total (with Smartlead)</span><span>~$680/mo</span></div>
+      </div>
+      <p style="font-size:12.5px; color: var(--ink-mute); margin-top:8px;">All accounts in your name. If we part ways, everything stays with you.</p>
+    </div>
+  </div>
 
-  <h2>Compliance Stance</h2>
-  <p>US cold email is a gray area, not a black one. What we practice: sender identity present, one-click unsubscribe honored, no misleading subjects or from-fields, no address harvesting, no GDPR geographies. That covers CAN-SPAM.</p>
-  <p>On the enforcement pattern you raised: worth watching. I am active in the cold email mastermind community and none of it is landing there yet. We stay inside the practices that community treats as safe. If your internal bar is stricter, we adjust.</p>
+  <div class="section">
+    <div class="left">
+      <div class="num">05</div>
+      <div class="kicker">My Fee</div>
+    </div>
+    <div class="right">
+      <h2><em>$1,700/mo</em> for the 2-month test.</h2>
+      <p>We start action from week one. The picture gets cleared in a month when the first sequence completes. If we need more sequences we launch them. Covers list building (our special moat, nobody does this due to complex operations), copy, campaign setup, running the angle tests, weekly reports, reply routing, all of it.</p>
+      <p>After 2 months, if we found a winner, we move to retainer. Rough range <strong>$3,000-5,000/mo</strong> depending on volume. If we didn't find a winner, you still keep everything. No lock-in.</p>
+    </div>
+  </div>
 
-  <h2>What Happens If Phase 1 Doesn't Hit</h2>
-  <p>You keep the mailboxes, the data, the winning angles we did find, and the Claude Code system. No lock-in beyond the 2-month test window.</p>
+  <div class="section">
+    <div class="left">
+      <div class="num">06</div>
+      <div class="kicker">Weekly Rhythm</div>
+    </div>
+    <div class="right">
+      <p><strong>3-5k contacts added.</strong> 20-30k sends. Friday report on what converted and what to test next.</p>
+    </div>
+  </div>
 
-  <h2>Timeline</h2>
-  <table>
-    <tr><th>Day</th><th>Milestone</th></tr>
-    <tr><td>Day 0</td><td>Scope approved</td></tr>
-    <tr><td>Day 1-4</td><td>Mailbox provisioning, sequencer setup, ICP data pull, copy drafting</td></tr>
-    <tr><td>Day 5-7</td><td>First campaigns live</td></tr>
-    <tr><td>Week 2</td><td>First reports, first angle iteration</td></tr>
-    <tr><td>Week 4</td><td>Second round of angle tests</td></tr>
-    <tr><td>Week 8</td><td>Winner identified or clear no-go call. Retainer scoped or wind-down.</td></tr>
-  </table>
+  <div class="section">
+    <div class="left">
+      <div class="num">07</div>
+      <div class="kicker">Realistic Timeline</div>
+    </div>
+    <div class="right">
+      <div class="timeline">
+        <div class="t">Day 0</div><div class="d">You say yes</div>
+        <div class="t">Day 1-4</div><div class="d">Mailboxes provisioned, data pulled, copy drafted</div>
+        <div class="t">Day 5-7</div><div class="d">First campaigns live</div>
+        <div class="t">Week 2</div><div class="d">First angle iteration</div>
+        <div class="t">Week 4</div><div class="d">Second round of tests</div>
+        <div class="t">Week 8</div><div class="d">Winner identified → Phase 2 scope, or clean no-go call</div>
+      </div>
+    </div>
+  </div>
 
-  <h2>Deliverables I Owe You (from the call)</h2>
-  <ol>
-    <li>This proposal ✓</li>
-    <li>Landing page of the offer (sending via LinkedIn)</li>
-    <li>Client results / case study</li>
-    <li>Add you to the cold email mastermind community</li>
-  </ol>
+  <div class="section">
+    <div class="left">
+      <div class="num">08</div>
+      <div class="kicker">Team Backing You</div>
+    </div>
+    <div class="right">
+      <p>I work on a <strong>results approach</strong>, not a freelancer hourly bill. We meet deadlines when we have a team on backend. So I have <strong>one campaign guy + two data guys</strong> who will extract for you.</p>
+      <p>Also owing you from the call: landing page of the offer (<a href="https://crackclay.co/campaigns" style="color: var(--accent); font-style: italic;">crackclay.co/campaigns</a>), a couple client results, and I'll add you to the cold email mastermind community I mentioned.</p>
+    </div>
+  </div>
 
-  <h2>Next Step</h2>
-  <p>Reply yes or send a redline. On approval, I queue up mailbox provisioning this weekend and we go live Day 5-7.</p>
+  <div class="pullquote">
+    "The harder the contact is to reach, the better the outreach performs."
+    <span class="attr">— Alex Hormozi · the principle we're built on</span>
+  </div>
+
+  <div class="section" style="border-top:1.5px solid var(--ink);">
+    <div class="left">
+      <div class="num">09</div>
+      <div class="kicker">Next Step</div>
+    </div>
+    <div class="right">
+      <h2>Say yes. I queue mailbox provisioning <em>this weekend.</em></h2>
+      <p>If there's something off tell me and I'll adjust before we start.</p>
+      <div class="cta-row">
+        <a class="btn-primary" href="#">Say Yes</a>
+        <a class="btn-dark" href="#">Send a Redline</a>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <strong>Hassan</strong><br>
-    CrackClay &nbsp;·&nbsp; hassan@crackclay.co &nbsp;·&nbsp; crackclay.co
+    <div>
+      <strong>Hassan</strong> · CrackClay<br>
+      hassan@crackclay.co · crackclay.co/campaigns
+    </div>
+    <div style="text-align:right; font-family: Georgia, serif; font-style: italic; color: var(--accent);">
+      Anti-retainer pricing · 15M+ records delivered
+    </div>
   </footer>
 </div>
