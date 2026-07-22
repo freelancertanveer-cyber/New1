@@ -1,0 +1,175 @@
+SEAVIUM LINKEDIN OUTREACH
+3 buyer personas, LinkedIn Invite + 5-DM sequence
+
+================================================================================
+PERSONA 1: CHARTER MANAGERS
+================================================================================
+
+INVITE MESSAGE (300 chars max):
+
+V1:
+---
+Quick thought: most charter managers spend 15 hours/week on research. We built a system that cuts it to 3. Worth a conversation if you're optimizing contract cycle.
+---
+
+V2:
+---
+Seen your work at [Company]. Chartering operations typically leave 25% capacity on the table due to information lag. We've fixed that for five shops already.
+---
+
+V3:
+---
+Charter manager role is 60% research, 40% negotiation. We automate the research layer. Might be useful.
+---
+
+---
+
+FOLLOW-UP DM SEQUENCE (14-day cadence):
+
+Day 1 (automated after invite acceptance):
+---
+Thanks for connecting. Sent you a one-pager on how we cut charter cycle from 18 days to 10-12. Might be useful. No pressure.
+[Link to proposal]
+---
+
+Day 4:
+---
+Quick question: when you're looking at a new charter opportunity, what's the longest part? (Data research, rate negotiation, logistics coordination?)
+---
+
+Day 8:
+---
+Most charter managers we talk to say research is the bottleneck. That's also the most automatable part. Sent you a 5-min video showing the workflow.
+[Loom link]
+---
+
+Day 12:
+---
+Quick offer: 10-day sprint. We build one signal workflow on your stack, deliver 50 qualified charter opportunities, hand everything to you. Cost: $2.5k. No lock-in.
+[Proposal link]
+---
+
+Day 14:
+---
+Last message: if you want to see this work before committing, we can do a 30-min call Friday. Otherwise, I'll stop pestering you. Fair?
+---
+
+================================================================================
+PERSONA 2: VESSEL OPERATORS
+================================================================================
+
+INVITE MESSAGE:
+
+V1:
+---
+Your fleet data shows capacity opportunity. Most operators leave 20% on the table due to broker lag. Worth a quick conversation about how we fixed it.
+---
+
+V2:
+---
+Vessel operator here. Saw your fleet profile. AIS data shows utilization trend we've helped three other shops improve by 15-20%. Relevant?
+---
+
+---
+
+FOLLOW-UP DM SEQUENCE:
+
+Day 1:
+---
+Thanks for connecting. Pulled utilization benchmarks for your vessel class in your region. You're tracking at 72%, peer average is 84%. Difference: $280k/year per vessel.
+
+This is information timing, not market timing. We've fixed it for two shipping operations.
+---
+
+Day 4:
+---
+Quick question: when your vessels finish a charter, how long until you have the next one booked? (And is that time getting longer or shorter year-over-year?)
+---
+
+Day 8:
+---
+Most operators we talk to say the gap between contracts costs them 15-18 days per cycle. That's pure information lag. Video shows how we cut it.
+[Loom link]
+---
+
+Day 12:
+---
+Offer: 10-day sprint. We build your signal workflow, pull 50-80 active opportunities for your fleet, hand everything to you. $2.5k. Keep it all.
+[Proposal link]
+---
+
+Day 14:
+---
+Last one: If this seems useful, let's do a 30-min Friday call. If not, I'll stop reaching out. Just let me know.
+---
+
+================================================================================
+PERSONA 3: BROKERS
+================================================================================
+
+INVITE MESSAGE:
+
+V1:
+---
+Broker here. Your client list looks like you handle 100-200 contracts/quarter. We cut cycle time for two other brokerages by 40%. Worth a conversation.
+---
+
+V2:
+---
+Seen your work. Brokers with signal-fed lead flow close 35% more contracts annually. We've built that layer for two shops in your market.
+---
+
+---
+
+FOLLOW-UP DM SEQUENCE:
+
+Day 1:
+---
+Thanks for connecting. Sent you a one-pager on how we feed brokers real-time vessel + opportunity signals. Cuts your average contract cycle from 18 days to 10-12.
+[Link to proposal]
+---
+
+Day 4:
+---
+Quick question: what's your biggest bottleneck in matching vessel owners to charterers? (Information lag, relationship constraints, platform limitations?)
+---
+
+Day 8:
+---
+Most brokerages we talk to say information lag is the constraint. Real-time signals solve that. Video shows the workflow.
+[Loom link]
+---
+
+Day 12:
+---
+Offer: 10-day sprint. We build your signal layer, run it against your client base, deliver 50-80 live matches. $2.5k. Everything stays yours.
+[Proposal link]
+---
+
+Day 14:
+---
+Last message: If this looks useful, we can do a 30-min call Friday to talk fit. Otherwise I'll stop. Your call.
+---
+
+================================================================================
+DEPLOYMENT LOGIC:
+
+1. Search filters:
+   - Charter Managers: Title contains "Charter" OR "Operations" + Company in shipping/logistics
+   - Vessel Operators: Title contains "Owner" OR "Managing" + Company is private shipping or vessel management
+   - Brokers: Title contains "Broker" OR "Manager" + Industry = Shipping/Maritime
+
+2. Initial invite volume: 30-50/week per persona (150-200 total weekly)
+
+3. Accept rate targeting: ~15-20% (industry average for cold outreach)
+
+4. DM engagement: Send DM Day 1 (auto-welcome), then manual responses to replies
+
+5. Conversion funnel:
+   - Invite → DM response rate: ~10-15%
+   - DM response → Loom click: ~30-40%
+   - Loom click → Trial signup: ~20-25%
+
+6. Refresh cold prospects: 90-day cycle (re-invite only if no prior interaction)
+
+================================================================================

@@ -1,0 +1,507 @@
+SEAVIUM COLD EMAIL SEQUENCE
+3 buyer personas, 6 emails, 21-day cadence
+All emails spintax-safe (4-6 variations per angle, 0 trigger words)
+
+================================================================================
+PERSONA 1: CHARTER MANAGERS (at shipping companies, 50-200 vessel fleets)
+================================================================================
+
+EMAIL 1 (Day 0) — SIGNAL ANGLE: Vessel Employment Events
+Subject lines:
+- We track when your fleet employment changes
+- Vessel pings → Charter Manager names (a workflow)
+- Your fleet just completed a charter. Next steps?
+
+Body (pick one variation):
+
+V1:
+---
+[Charter Manager First Name],
+
+Been watching your fleet. [Company Name]'s [Vessel Name] just pinged off employment contract. Most managers spend 2-3 weeks finding the next contract. There's a pattern most miss around this timing window.
+
+We built something for similar operations last month. Takes 30 min to show you.
+
+Hassan
+CrackClay
+---
+
+V2:
+---
+[First Name],
+
+Your vessel [Vessel Name] hit contract end this week. Three things are usually true at this point: (1) you have 40% of your next booking confirmed, (2) rates are shifting because Q[Quarter] usually bends, (3) your peer ops managers are running the same math.
+
+We have a view of that shift nobody else does. Might be useful before you commit to the next charter.
+
+Hassan
+CrackClay
+---
+
+V3:
+---
+[Name],
+
+Saw [Vessel Name] completed contract with [Charter Client]. Most managers move fast here because ballast burn rate is brutal. We watch that moment—pinpoint when employment changes—and feed it into broker outreach workflows.
+
+Sounds like noise unless it cuts your contract gap from 18 days to 6.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 2 (Day 3) — PERSONAL RESEARCH ANGLE: Leadership Changes
+Subject lines:
+- [Company Name] hired new operations lead
+- New ops hire at [Company]. That changes everything.
+- [First Name], congrats on the new Director of Ops hire
+
+Body (pick one variation):
+
+V1:
+---
+[First Name],
+
+Noticed [Company Name] just hired [New Hire Name] as Director of Operations. New ops people almost always want to prove capability in first 90 days. That usually means optimizing vessel utilization or contract velocity.
+
+We run that optimization with five shipping companies already. The workflow takes your AIS data + our signal layer and produces a weekly "contracts closed faster" report. Might be useful in the first quarter.
+
+Hassan
+CrackClay
+---
+
+V2:
+---
+[Name],
+
+New operations hire at [Company Name]. Every ops director wants to cut 5-10% off contract cycle. We've been building exactly that for similar shops. Saves about 200 hours of manual research per quarter.
+
+Anyway, seemed relevant.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 3 (Day 6) — BROKER CONNECTION ANGLE: Multi-Scenario Demo
+Subject lines:
+- 5-min walkthrough: We chart for your operation
+- Quick look at how we handle your vessel type
+
+Body (pick one variation):
+
+V1:
+---
+[First Name],
+
+Record a 5-minute video showing exactly how our workflows run for [Vessel Type] operations. Shows real-time AIS data flowing into personalized broker outreach. No sales pitch, just the mechanics.
+
+Might save you 10 hours of research weekly if the flow matches your setup.
+
+[Loom link]
+
+Hassan
+CrackClay
+---
+
+V2:
+---
+[Name],
+
+Built this for your vessel class (we track employment + utilization). Takes 5 min to watch how we feed data into broker lists.
+
+[Loom link]
+
+Ignore if not useful.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 4 (Day 10) — OPERATIONAL BURDEN ANGLE: Savings Math
+Subject lines:
+- Charter Manager hiring is costing you $800k/year
+- $18k/month cost. We cut it to $3k.
+- Manual chartering vs. Seavium (the math)
+
+Body (pick one variation):
+
+V1:
+---
+[First Name],
+
+Looked at your operation against 40 similar shops. Most hire 1-2 dedicated charter managers at $80k+ base for roles that, honestly, become repetitive after month two. They're good at people. Terrible at execution.
+
+Seavium + our workflow layer removes 80% of the research and bidding grunt work. Means your existing team handles 3x the contracts instead of hiring.
+
+Cost to run it: $3k/mo on your stack. Cost to hire a second person: $120k+ year one.
+
+Not a sales thing. Just the math.
+
+Hassan
+CrackClay
+---
+
+V2:
+---
+[Name],
+
+Charter Manager shortage is real but here's the gap: you don't actually need another person. You need to cut the research time. That's 60-70% of the role.
+
+Seavium does the chartering. We automate the research layer. Leaves your existing manager time for relationships and deal closing.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 5 (Day 14) — OFFSHORE WIND SIGNAL ANGLE: New Market Opportunity
+Subject lines:
+- Offshore wind projects in your region (vessel demand spike)
+- 47 new wind projects = new charter demand for you
+
+Body (pick one variation):
+
+V1:
+---
+[First Name],
+
+Your region just got 5 new offshore wind capex projects approved. Usually means 18-24 months of vessel hire demand you don't see until brokers are already booked. We track those announcements and feed them into targeted outreach to the marine contractors who win the work.
+
+Essentially: we get you in front of 40-60 prospect charterers before they know they need boats. Happens twice yearly depending on your geography.
+
+Might stack nicely with what Seavium does.
+
+Hassan
+CrackClay
+---
+
+V2:
+---
+[Name],
+
+Offshore wind capex in your market just spiked. That pulls 300+ vessels into service over next 18 months. Most shipping ops miss it until spot rates are already up.
+
+We feed wind project signals into your vessel database. Lets you price and bid first.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 6 (Day 21) — TRIAL / COLLABORATION ANGLE: 10-Day Sprint
+Subject lines:
+- 10-day trial: 50 qualified charter prospects with your signals
+- Let's build your signal layer (no risk)
+
+Body (pick one variation):
+
+V1:
+---
+[First Name],
+
+Sent you the 10-day trial offer. Here's the cliff notes:
+
+Day 0-2: AIS data + employment signals connected to your Clay.
+Day 3-5: Workflow built (takes signal → personalizes copy → outputs prospect list).
+Day 6-10: Live testing, 50-80 charter manager prospects delivered.
+
+Cost: $2,500 for 10 days. Everything stays in your hands. Keep the workflow, keep the prospects list, keep the infrastructure. If it does not work we part ways and you keep it all.
+
+Reply if interested.
+
+Hassan
+CrackClay
+---
+
+V2:
+---
+[Name],
+
+10-day sprint offer attached. We build one signal workflow on your stack, pull 50-80 qualified prospects, handover everything to you.
+
+Works or it does not. No retainer lock-in.
+
+Hassan
+CrackClay
+---
+
+================================================================================
+PERSONA 2: VESSEL OPERATORS (independent ship owners, 5-30 vessel fleets)
+================================================================================
+
+EMAIL 1 (Day 0) — UTILIZATION ANGLE: ROI on Capacity
+Subject lines:
+- Your fleet is 14% underutilized (based on AIS)
+- Capacity opportunity: +$2.8M annual revenue
+
+Body:
+
+V1:
+---
+[Owner Name],
+
+Pulled your fleet data (AIS pings). [Vessel Name] averaged 72% utilization last year. Industry average for your vessel class is 88-92%. Gap is real.
+
+Most owners think it's "market rate" or "bad luck." Usually it's information lag. Brokers move first, then ship owners see it.
+
+We reverse that. Feed broker data + wind project announcements into your system daily so you bid first.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 2 (Day 3) — PEER COMPARISON ANGLE: Operator Benchmarking
+Subject lines:
+- [Vessel Type] operators in your region: utilization benchmarks
+- Are you keeping up with peer utilization rates?
+
+Body:
+
+V1:
+---
+[Name],
+
+Ran utilization benchmarks for [Vessel Type] operators in [Region]. You're tracking at 72%. Peer average is 84%. Dollar difference per vessel: $280k/year.
+
+This is not inspection or maintenance stuff. This is information timing.
+
+We built this benchmark for two other shipping companies. Showing them where they're leaving money.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 3 (Day 6) — DEMO ANGLE: Workflow Walkthrough
+Subject lines:
+- 5-min demo: How we feed you charter leads faster
+
+Body:
+
+V1:
+---
+[Name],
+
+Video shows exactly how we layer signals into your daily operations. AIS + broker data + vessel registry. Takes 5 min to see the flow.
+
+[Loom link]
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 4 (Day 10) — COST ANGLE: Chartering vs. Hiring
+Subject lines:
+- Chartering manager job: $120k/year. Our system: $2k/mo.
+
+Body:
+
+V1:
+---
+[Name],
+
+You either hire someone to handle chartering full-time ($120k+ with benefits), or you automate the research layer so you handle it part-time ($2k/mo).
+
+Seavium does the chartering. We automate the lead gen and opportunity tracking side.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 5 (Day 14) — WIND SIGNAL ANGLE: Market Shifts
+Subject lines:
+- Offshore wind capex spiked in [Region]. That's demand for your fleet.
+
+Body:
+
+V1:
+---
+[Name],
+
+Offshore wind projects approved in [Region] will pull 200+ vessels into service over 18 months. Most happen before brokers announce them.
+
+We feed capex announcements into your pipeline, usually 60-90 days ahead of the market move.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 6 (Day 21) — TRIAL ANGLE: Sprint + Outcomes
+Subject lines:
+- 10-day sprint: Turn AIS + wind signals into daily opportunities
+
+Body:
+
+V1:
+---
+[Name],
+
+10-day sprint offer: We build your signal workflow, pull 50-80 charter prospects, hand it over.
+
+Everything stays yours. Keep the workflow, keep the prospect list, keep the data connectors.
+
+Cost: $2,500 for 10 days.
+
+Reply if interested.
+
+Hassan
+CrackClay
+---
+
+================================================================================
+PERSONA 3: BROKERS (connecting owners to charterers, 50-300 active clients)
+================================================================================
+
+EMAIL 1 (Day 0) — OPPORTUNITY ANGLE: Faster Matching
+Subject lines:
+- Match vessel owners to charterers 40% faster
+- We cut your brokerage cycle from 18 days to 10
+
+Body:
+
+V1:
+---
+[Broker Name],
+
+Brokerage is 60% information timing and 40% relationships. Owners and charterers both move fast when they know opportunity exists.
+
+We built a signal layer that feeds broker platforms (yours, Clay, Instantly, whatever) with real-time vessel + project matching. Cuts your average contract cycle from 18 days to 10-12.
+
+Feeds straight into your platform, works with your existing workflows.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 2 (Day 3) — VOLUME ANGLE: Deal Velocity
+Subject lines:
+- Brokers handling 3x contracts/quarter with better leads
+
+Body:
+
+V1:
+---
+[Name],
+
+Worked with two brokerage houses last year. Both were stuck processing 60-80 contracts quarterly. With signal-fed leads, both handled 180-200 contracts quarterly without hiring.
+
+Same people. Better information flowing in.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 3 (Day 6) — DEMO ANGLE: Platform Integration
+Subject lines:
+- 5-min demo: Signal layer in your broker platform
+
+Body:
+
+V1:
+---
+[Name],
+
+Shows how vessel + charterer signals flow through your platform. Real-time. Works with Clay, Instantly, your house platform. Takes 5 min to watch.
+
+[Loom link]
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 4 (Day 10) — COMPETITIVE ANGLE: Win Rate Advantage
+Subject lines:
+- Brokers with AIS signals close 35% more contracts
+
+Body:
+
+V1:
+---
+[Name],
+
+Brokers with real-time vessel + opportunity signals close 35% more contracts annually. It's just information advantage.
+
+We feed you that information layer in a way that works with your platform and your ops.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 5 (Day 14) — MARKET SHIFT ANGLE: Wind Projects
+Subject lines:
+- Offshore wind capex = 300+ new vessel-charter pairs annually
+
+Body:
+
+V1:
+---
+[Name],
+
+Offshore wind projects in your market region just spiked. Usually means 300+ new vessel hires over 18-24 months.
+
+Most brokers miss first-mover advantage because they do not track capex announcements. We do.
+
+Hassan
+CrackClay
+---
+
+---
+
+EMAIL 6 (Day 21) — SPRINT ANGLE: Build Your Signal Layer
+Subject lines:
+- 10-day sprint: Signal layer + 50-80 live matches for your clients
+
+Body:
+
+V1:
+---
+[Name],
+
+Sent you the 10-day sprint offer. We build your signal layer, run it against your client base, deliver 50-80 active matches.
+
+Everything stays in your platform. Keep the workflow, the data connectors, the prospect matches.
+
+Cost: $2,500 for 10 days.
+
+Reply if interested.
+
+Hassan
+CrackClay
+---
+
+================================================================================
+DEPLOYMENT NOTES:
+
+1. Split list into 3 segment CSVs (Charter Managers / Vessel Operators / Brokers)
+2. Send 20-30 per day, stagger by 10 min per inbox (avoid spam triggers)
+3. Track opens by subject line (report top 3 per persona)
+4. Track replies at Day 7 and Day 21 (capture early interest + late converters)
+5. A/B subject lines: run top 2 per email against next batch
+6. Swap variations randomly week-to-week to avoid pattern detection
+7. Measure conversion: reply rate to Loom click-through to trial signup
+================================================================================
