@@ -1,0 +1,19 @@
+Subject: AIS signals for Charter Manager targeting
+
+Adrien,
+
+One thing stuck with me from our call: you're tracking vessel employment events manually in spreadsheets. That's the exact signal layer that moves 50-80 charter manager conversations per month. I built this workflow for an insurance-adjacent shipping client last quarter. Sent you the attached 10-day sprint proposal.
+
+Hassan
+crackclay.co/campaigns
+
+---
+
+Alternative (shorter):
+
+Subject: 50-80 charter manager prospects (AIS-backed)
+
+That vessel employment signal we talked through on the call runs at scale. One 10-day sprint and you go from 0 to 80 prospects with signal-backed personalization. Proposal attached.
+
+Hassan
+crackclay.co
