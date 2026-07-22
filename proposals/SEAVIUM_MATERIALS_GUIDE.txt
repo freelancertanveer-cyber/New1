@@ -1,0 +1,174 @@
+SEAVIUM MATERIALS GUIDE
+All files ready for deployment
+
+================================================================================
+IMMEDIATE USE (Post-Call Follow-Up)
+================================================================================
+
+1. POST-CALL EMAIL TEMPLATE
+   File: adrien_seavium_followup_email.txt
+   Use: Send within 24 hours of call
+   Format: 2 options (3-sentence + 2-sentence)
+   Tone: Signal-focused, no hard sell
+   CTA: Attach full proposal
+
+2. FULL PROPOSAL (3 formats)
+   Files:
+   - adrien_seavium_proposal.html (web-ready)
+   - adrien_seavium_proposal.md (for editing/sharing)
+   - adrien_seavium_proposal.pdf (send via email)
+
+   Key details:
+   - 10-day sprint framework ($2,500)
+   - 3 signal layers: vessel employment, wind capex, hiring
+   - 50-80 qualified prospects delivered
+   - Data moat positioning (AIS + LinkedIn + Clay + Claude Code)
+   - No lock-in, client keeps everything
+
+================================================================================
+OUTBOUND CAMPAIGN (Cold Email + LinkedIn)
+================================================================================
+
+3. COLD EMAIL SEQUENCE
+   File: seavium_cold_email_sequence.txt
+   Format: 6 emails over 21 days
+   Segmentation: 3 buyer personas (Charter Managers, Vessel Operators, Brokers)
+
+   Each persona gets:
+   - Email 1 (Day 0): Signal/data angle
+   - Email 2 (Day 3): Leadership/research angle
+   - Email 3 (Day 6): Loom demo video
+   - Email 4 (Day 10): Cost/ROI comparison
+   - Email 5 (Day 14): Market opportunity angle (wind projects)
+   - Email 6 (Day 21): Trial/sprint close
+
+   Spintax: 3-5 variations per subject + body copy, 0 spam triggers
+   Deployment: 20-30/day per persona, 10-min gaps between sends
+
+4. LINKEDIN OUTREACH
+   File: seavium_linkedin_outreach.txt
+   Format: Invite messages + 5-DM follow-up (14-day cadence)
+   Segmentation: Same 3 buyer personas
+
+   Each persona gets:
+   - Invite message: 2-3 variations (300 chars max)
+   - Day 1 DM: Intro + one-pager link
+   - Day 4 DM: Discovery question
+   - Day 8 DM: Loom video offer
+   - Day 12 DM: Trial offer
+   - Day 14 DM: Last touch (call or exit)
+
+   Volume: 30-50/week per persona (150-200 total)
+   Expected reply rate: 15-20%
+
+================================================================================
+INTEGRATION WITH LOOM VIDEO
+================================================================================
+
+Video should show:
+1. Live Seavium platform (AIS data + vessel tracking)
+2. Claude Code workflow (signal detection → personalization → output)
+3. 3 signal layers in action:
+   - Vessel employment event detection
+   - Offshore wind project tracking
+   - Shipping company hiring signals
+4. Prospect list generation (real data, 50-80 examples)
+5. Copy personalization (show 3 variations per prospect)
+6. How to send (CSV export or Clay integration)
+7. Price positioning: "This workflow costs $2.5k for 10 days or $3-5k/mo after"
+
+Duration: 4-5 minutes (skip intro pitches, show outcome)
+CTA: "Reply yes to start, or book a 30-min call Friday"
+
+Embed video in:
+- Email 3 of cold sequence (both personas)
+- Email 6 of cold sequence (final touch)
+- LinkedIn Day 8 DM (follow-up sequence)
+
+================================================================================
+DEPLOYMENT TIMELINE
+================================================================================
+
+Week 1:
+- Send post-call email + proposal (Day 0-1 after call)
+- Set up LinkedIn outreach (300 + profiles across 3 personas)
+- Record Loom video (if going to broader cold outreach)
+
+Week 2:
+- Launch cold email batch 1 (100 Charter Managers)
+- Start LinkedIn invite sequence (50/week per persona)
+- Monitor open rates, sort top 3 subject lines
+
+Week 3:
+- Cold email batch 2 (100 Vessel Operators)
+- Continue LinkedIn outreach
+- Prepare follow-up sequence based on email performance
+
+Week 4:
+- Cold email batch 3 (100 Brokers)
+- Refresh LinkedIn targeting (new profiles, same copy)
+- Analyze conversion funnel: email → loom → trial
+
+================================================================================
+PERFORMANCE TARGETS
+================================================================================
+
+Cold Email:
+- Open rate: 20-25% (industry: 15-20%)
+- Reply rate: 3-5% (industry: 1-2%)
+- Trial signup: 10-15% of replies
+
+LinkedIn:
+- Accept rate: 15-20%
+- DM reply rate: 10-15%
+- Loom click rate: 30-40%
+- Trial signup: 20-25% of Loom clicks
+
+Trial Conversion:
+- 10-day sprint starts: 50-60% of signups
+- Tier 2 conversion (after sprint): 70-80%
+
+================================================================================
+CUSTOMIZATION BY PERSONA
+================================================================================
+
+CHARTER MANAGERS (shipping company staff, 50-200 vessel fleets):
+- Pain: 18-day contract gaps, manual research
+- Signal: Vessel employment events (AIS pings)
+- ROI: Cut contract gap from 18 days to 6-8
+- Proof: "Most managers are processing manually; we automate it"
+
+VESSEL OPERATORS (independent owners, 5-30 vessels):
+- Pain: 25% capacity underutilization, broker lag
+- Signal: AIS data + broker intelligence + market timing
+- ROI: Cut underutilization from 25% to 10% = $280k+ per vessel annually
+- Proof: "Peer operators in your market average 88%; you're at 72%"
+
+BROKERS (matching owners to charterers):
+- Pain: 18-day contract cycle, low deal velocity
+- Signal: Real-time vessel + opportunity matching
+- ROI: Handle 3x contracts with same staff
+- Proof: "Brokers with signal-fed leads close 35% more contracts"
+
+================================================================================
+NEXT STEPS IF ADRIEN SAYS YES
+================================================================================
+
+1. Schedule Day 0 kickoff call (Friday preferred)
+2. Confirm which signal layer to build first (AIS, wind projects, or hiring)
+3. Get:
+   - Clay guest seat access
+   - ICP paragraph (who are charter managers at [Company Type]?)
+   - Any existing data sources (vessel registry, broker database, etc.)
+   - Timeline: can we start Monday? (10-day sprint compresses to 5 business days)
+
+4. During sprint:
+   - Daily async Slack updates (what shipped, what's blocking)
+   - Day 5 checkpoint (show draft prospect list)
+   - Day 10 handover (final list + workflow demo + copy templates)
+
+5. After sprint (2 paths):
+   - Path A: Roll into Tier 2 ($3.5k/mo) for ongoing workflow builds
+   - Path B: Keep infrastructure, iterate in-house with async support ($500/mo monitoring)
+
+================================================================================
