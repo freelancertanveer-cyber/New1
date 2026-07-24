@@ -1,0 +1,20 @@
+10,000 Amazon UK sellers is easy to scrape and hard to make useful. The difference is whether each row ties the listing to the actual owner and a work email that reaches them, not a support desk.
+
+I attached a 50-row sample from a recent Amazon build so you can judge the depth before spending a penny. Every row carries: ASIN + listing URL, brand, est. monthly + 12-month revenue, category, rating, company domain, decision-maker name, job title, LinkedIn, and work email.
+
+Two things most applicants will miss on this job:
+
+- Revenue sizing. When you can see one seller does 60k/month and another does 5k, you pitch the top 20% first instead of treating 10,000 rows as one blob.
+- Category weighting. Amazon UK clusters differently than US. Confirm your target categories up front or 40% of the list lands off-target.
+
+My process runs on Clay, on my own token cost, so nothing hits your budget: pull the seller + ASIN layer from Amazon UK against your criteria, match each brand to its domain, then waterfall-enrich the decision maker across multiple providers for high coverage, not the 40% a single source gives. Delivered clean in Sheets or Excel.
+
+The sample emails are left unverified on purpose, so you can run them through your own tool and confirm quality yourself.
+
+Three quick things so I can size the batch:
+
+1. Which categories matter most, or all categories no weighting?
+2. Any minimum seller size (revenue or review floor), or full range?
+3. Sheets or Excel, one flat file or split by category?
+
+Answer those and I can turn the first batch fast.
