@@ -1,0 +1,45 @@
+Hi,
+
+Read your post. 10,000 verified Amazon UK sellers is not a "scrape a storefront list" job, and most people who apply will treat it like one. The hard part is not finding the brand. It is connecting the brand on the listing to the actual human who owns it, plus a work email that reaches them and not a support desk.
+
+Attached is a 50-row sample from a recent Amazon build so you can see the exact depth and format before you commit anything.
+
+What each row gives you:
+
+- ASIN + listing URL
+- Brand and product title
+- Est. monthly revenue and 12-month revenue (so you can sort by seller size, not just count rows)
+- Category and rating
+- Company domain
+- Full name of the decision maker
+- Job title (mostly Founder, CEO, Owner, President)
+- LinkedIn profile
+- Work email
+
+Real insight from the data on this niche:
+
+1. The money is in the decision-maker layer. Anyone can pull a brand name off Amazon. The value is tying that ASIN to the founder or owner and their direct work email. On my last build, 100% of rows carried a named decision maker and a work email, 85% carried a verified LinkedIn.
+
+2. Revenue sizing changes how you use the list. When you can see one seller does 60k/month and another does 5k, you stop treating 10,000 leads as one blob and start prioritising the top 20% that are actually worth a pitch. Most lead lists skip this entirely.
+
+3. Category clusters matter. On the comparable US build the sellers concentrated hard in Health & Household, Grocery, and Beauty & Personal Care. Amazon UK skews differently, so I would confirm which categories you want weighted before I run volume, or you get 10,000 rows that are 40% off-target.
+
+My process (runs on Clay, on my own token cost, nothing hits your wallet):
+
+1. Pull the seller and ASIN layer from the Amazon UK marketplace against your criteria (category, revenue band, rating, seller type).
+2. Match each brand to its company domain.
+3. Enrich the decision maker through Clay's waterfall across multiple providers, so coverage is high instead of the 40% you get from a single source.
+4. Append work email, job title, and LinkedIn.
+5. Deliver clean in Google Sheets or Excel, structured exactly like the sample.
+
+One honest note: the emails in the sample are not run through a verifier. That is deliberate so you can drop them into your own verification tool (NeverBounce, ZeroBounce, whatever you use) and confirm the quality yourself rather than taking my word for it.
+
+Three quick questions so I can size the real batch:
+
+1. Which categories or product types on Amazon UK matter most to you? (Or do you want all categories, no weighting?)
+2. Any minimum seller size, say a revenue or review-count floor, or do you want the full range including small sellers?
+3. Sheets or Excel, and do you want one flat file or split by category?
+
+Answer those three and I can lock scope and turn the first batch fast.
+
+Regards,
