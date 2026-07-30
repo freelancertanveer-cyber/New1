@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RepuLeads — Companies With Bad Reviews. Their Decision Makers. Ready for Outreach.</title>
+<style>
+  :root {
+    --cream: #faf6ef;
+    --cream-card: #ffffff;
+    --border: #e8e0d3;
+    --ink: #1a1714;
+    --ink-soft: #5c5347;
+    --orange: #d9662f;
+    --orange-dark: #b8501f;
+    --green: #2f8f5b;
+    --red: #c14343;
+    --tag-bg: #f3ece0;
+  }
+  :root[data-theme="dark"] {
+    --cream: #17140f;
+    --cream-card: #211d17;
+    --border: #3a3327;
+    --ink: #f2ede2;
+    --ink-soft: #b8ad9a;
+    --tag-bg: #2c261c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --cream: #17140f;
+      --cream-card: #211d17;
+      --border: #3a3327;
+      --ink: #f2ede2;
+      --ink-soft: #b8ad9a;
+      --tag-bg: #2c261c;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.55;
+  }
+  .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  section { padding: 72px 0; }
+  .border-top { border-top: 1px solid var(--border); }
+
+  /* Hero */
+  .hero { padding: 64px 0 56px; text-align: center; }
+  .badge {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--orange-dark);
+    border: 1px solid var(--orange);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 400;
+    margin: 0 0 8px;
+    line-height: 1.25;
+  }
+  h1 .accent { color: var(--orange); font-weight: 700; }
+  .sub {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--ink-soft);
+    font-size: 17px;
+    max-width: 620px;
+    margin: 24px auto 32px;
+  }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .pill {
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13.5px;
+    color: var(--ink);
+  }
+  .pill span { color: var(--green); font-weight: 700; margin-right: 4px; }
+
+  .cta {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 15.5px;
+    text-decoration: none;
+    padding: 15px 34px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .cta:hover { background: var(--orange-dark); }
+  .cta-note {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+  }
+
+  /* Promo banner */
+  .promo {
+    background: linear-gradient(90deg, var(--orange), var(--orange-dark));
+    color: #fff;
+    text-align: center;
+    padding: 12px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14.5px;
+    font-weight: 600;
+  }
+  .promo b { font-weight: 800; }
+
+  /* Section labels */
+  .label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--orange-dark);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 400;
+    margin: 0 0 28px;
+  }
+  .rule { width: 46px; height: 3px; background: var(--orange); margin-bottom: 24px; }
+
+  /* Stat cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 28px 0 24px;
+  }
+  .stat-card {
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Courier New', monospace;
+    font-size: clamp(22px, 3.4vw, 30px);
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .stat-num.mono-dollar { font-size: clamp(18px, 2.6vw, 24px); }
+  .stat-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+  p.body-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    max-width: 720px;
+  }
+
+  /* Record cards */
+  .record {
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .record-left { flex: 1; min-width: 260px; }
+  .record-name { font-weight: 700; font-size: 16px; }
+  .rating-tag {
+    display: inline-block;
+    background: #fce7e7;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+  }
+  :root[data-theme="dark"] .rating-tag { background: #3a1f1f; }
+  .record-meta { color: var(--ink-soft); font-size: 13px; margin: 4px 0 10px; }
+  .record-quote { font-style: italic; color: var(--ink-soft); font-size: 14.5px; }
+  .record-right { text-align: right; font-size: 13.5px; }
+  .record-right .name { font-weight: 700; }
+  .record-right .email, .record-right .phone { color: var(--ink-soft); }
+
+  /* Pricing */
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .price-card {
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .price-card.featured { border: 2px solid var(--orange); }
+  .popular-tag {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 14px;
+    border-radius: 999px;
+  }
+  .tier-name {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin-top: 6px;
+  }
+  .price {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 12px 0 2px;
+  }
+  .price .strike {
+    font-size: 17px;
+    color: var(--ink-soft);
+    text-decoration: line-through;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+  .per-company { font-size: 12.5px; color: var(--ink-soft); }
+  .company-count {
+    font-weight: 700;
+    margin: 14px 0;
+    font-size: 15px;
+  }
+  .company-count .was {
+    display: block;
+    font-weight: 400;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    text-decoration: line-through;
+  }
+  .feat-list { text-align: left; font-size: 13.5px; margin-top: 16px; }
+  .feat-list div { margin-bottom: 9px; display: flex; gap: 8px; }
+  .feat-list .check { color: var(--green); font-weight: 700; }
+
+  /* ROI table */
+  .roi-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .roi-box {
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 10px;
+    text-align: center;
+  }
+  .roi-box.result { background: #e5f4ec; border-color: var(--green); }
+  :root[data-theme="dark"] .roi-box.result { background: #16281f; }
+  .roi-box .num { font-size: 20px; font-weight: 800; }
+  .roi-box.result .num { color: var(--green); }
+  .roi-box .lbl { font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+
+  table.roi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13.5px;
+    margin-top: 20px;
+  }
+  table.roi-table th {
+    text-align: left;
+    color: var(--ink-soft);
+    font-weight: 600;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  table.roi-table td {
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  table.roi-table td.roi-val { color: var(--green); font-weight: 700; }
+
+  /* Checklist */
+  .checklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 30px;
+    margin-top: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+  }
+  .checklist div { display: flex; align-items: center; gap: 10px; }
+  .check-box {
+    width: 20px; height: 20px;
+    border-radius: 5px;
+    background: #e5f4ec;
+    color: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800;
+    flex-shrink: 0;
+  }
+  :root[data-theme="dark"] .check-box { background: #16281f; }
+
+  /* Case study */
+  .case-card {
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .case-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .case-title { font-weight: 700; font-size: 17px; }
+  .case-status {
+    background: #e5f4ec; color: var(--green);
+    font-size: 12px; font-weight: 700;
+    padding: 4px 12px; border-radius: 999px;
+  }
+  :root[data-theme="dark"] .case-status { background: #16281f; }
+  .case-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 10px;
+  }
+  @media (max-width: 640px) { .case-metrics { grid-template-columns: 1fr; } }
+  .case-metric {
+    text-align: center;
+    padding: 16px 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .case-metric .num { font-size: 22px; font-weight: 800; }
+  .case-metric.good .num { color: var(--green); }
+  .case-metric .lbl { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
+
+  /* Compliance */
+  .compliance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 28px;
+  }
+  .comp-card {
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .comp-card h3 { margin: 0 0 8px; font-size: 15.5px; font-family: Georgia, serif; font-weight: 700; }
+  .comp-card p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+
+  /* Final CTA */
+  .final-cta {
+    text-align: center;
+    background: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 56px 24px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px 48px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 720px) {
+    .stat-grid, .price-grid, .compliance { grid-template-columns: 1fr; }
+    .roi-flow { grid-template-columns: 1fr 1fr; }
+    .checklist { grid-template-columns: 1fr; }
+    .record { flex-direction: column; }
+    .record-right { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="promo sans">🔥 Promo pricing locked through <b>September 1</b> — every tier ships <b>2x the companies</b>, same price. After Sep 1, pricing reverts.</div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">REPULEADS</span>
+    <h1>Companies with bad reviews.<br>Their decision makers.<br><span class="accent">Ready for your outreach.</span></h1>
+    <p class="sub">We find U.S. companies with low Trustpilot ratings, pull the exact reviews customers left about them, and hand you the verified contact info of the person who can say yes to a review removal deal.</p>
+    <div class="pills">
+      <div class="pill"><span>✓</span>Trustpilot verified scores</div>
+      <div class="pill"><span>✓</span>Decision maker emails</div>
+      <div class="pill"><span>✓</span>Direct phone numbers</div>
+      <div class="pill"><span>✓</span>Actual review text</div>
+    </div>
+    <a href="#pricing" class="cta">Get 2x the leads at the same price →</a>
+    <div class="cta-note">Limited-time promo pricing, ends September 1</div>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="label">MARKET OPPORTUNITY</div>
+    <h2>The numbers behind the pain</h2>
+    <div class="rule"></div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">361M+</div>
+        <div class="stat-label">Total reviews on Trustpilot</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">13%</div>
+        <div class="stat-label">Are negative (1 to 2 stars)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num mono-dollar">$200–$675</div>
+        <div class="stat-label">Market range per review removal</div>
+      </div>
+    </div>
+    <p class="body-text">Thousands of U.S. companies with 0 to 500 employees are sitting on Trustpilot with terrible ratings right now. They're losing deals because of it. Agencies in this space charge $200 to $675 per review removal, and some go past $5,000. We build the list that puts that opportunity in front of you, sorted and ready.</p>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="label">WHAT YOU GET</div>
+    <h2>Every record comes ready to use</h2>
+    <div class="rule"></div>
+
+    <div class="record">
+      <div class="record-left">
+        <span class="record-name">Semper Solaris</span><span class="rating-tag">1.4 ★</span>
+        <div class="record-meta">sempersolaris.com &nbsp;/&nbsp; Solar</div>
+        <div class="record-quote">"Damaged my gutters during install and ghosted me on warranty claims for 6 months..."</div>
+      </div>
+      <div class="record-right">
+        <div class="name">John Kelly, VP Operations</div>
+        <div class="email">j.kelly@semper...</div>
+        <div class="phone">(619) 555-XXXX</div>
+      </div>
+    </div>
+
+    <div class="record">
+      <div class="record-left">
+        <span class="record-name">CrossCountry Mortgage</span><span class="rating-tag">1.5 ★</span>
+        <div class="record-meta">crosscountrymortgage.com &nbsp;/&nbsp; Lending</div>
+        <div class="record-quote">"Worst loan experience of my life. Lost my paperwork twice and blamed me for the delay..."</div>
+      </div>
+      <div class="record-right">
+        <div class="name">Sarah Mitchell, CMO</div>
+        <div class="email">s.mitchell@ccm...</div>
+        <div class="phone">(440) 555-XXXX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-top" id="pricing">
+  <div class="wrap">
+    <div class="label">PRICING — PROMO ACTIVE</div>
+    <h2>Pick your list size</h2>
+    <div class="rule"></div>
+    <p class="body-text">Same data quality across every tier. Through September 1, every tier ships double the companies at the same price. You choose how many decision makers you need.</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="tier-name">Starter</div>
+        <div class="price">$297</div>
+        <div class="per-company">$0.74 / company</div>
+        <div class="company-count">400 companies<span class="was">was 200</span></div>
+        <div class="feat-list">
+          <div><span class="check">✓</span>Trustpilot score + review text</div>
+          <div><span class="check">✓</span>Decision maker email</div>
+          <div><span class="check">✓</span>Direct phone number</div>
+          <div><span class="check">✓</span>CSV delivery in 48 hours</div>
+        </div>
+      </div>
+
+      <div class="price-card featured">
+        <span class="popular-tag">MOST POPULAR</span>
+        <div class="tier-name">Growth</div>
+        <div class="price">$597</div>
+        <div class="per-company">$0.60 / company</div>
+        <div class="company-count">1,000 companies<span class="was">was 500</span></div>
+        <div class="feat-list">
+          <div><span class="check">✓</span>Everything in Starter</div>
+          <div><span class="check">✓</span>Bad review count per company</div>
+          <div><span class="check">✓</span>Industry vertical filtering</div>
+          <div><span class="check">✓</span>Sorted worst score first</div>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <div class="tier-name">Scale</div>
+        <div class="price">$997</div>
+        <div class="per-company">$0.50 / company</div>
+        <div class="company-count">2,000 companies<span class="was">was 1,000</span></div>
+        <div class="feat-list">
+          <div><span class="check">✓</span>Everything in Growth</div>
+          <div><span class="check">✓</span>Exclusive territory lock</div>
+          <div><span class="check">✓</span>Multi-platform coverage</div>
+          <div><span class="check">✓</span>Priority refresh access</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="label">RETURN ON INVESTMENT</div>
+    <h2>Close 2 deals. The list pays for itself many times over.</h2>
+    <div class="rule"></div>
+    <p class="body-text">Agencies charge $200 to $675 per review removal. Here's what 2 closed deals look like on the Growth tier, now at double the companies for the same $597.</p>
+
+    <div class="roi-flow">
+      <div class="roi-box"><div class="num">$597</div><div class="lbl">You invest</div></div>
+      <div class="roi-box"><div class="num">1,000</div><div class="lbl">Companies</div></div>
+      <div class="roi-box"><div class="num">2</div><div class="lbl">Deals closed</div></div>
+      <div class="roi-box result"><div class="num">~$10,000</div><div class="lbl">Your revenue</div></div>
+    </div>
+
+    <table class="roi-table">
+      <tr><th>Your price/review</th><th>Deal 1 (1–2 reviews)</th><th>Deal 2 (1–2 reviews)</th><th>Total revenue</th><th>ROI</th></tr>
+      <tr><td>$200</td><td>$2,400</td><td>$2,400</td><td>$4,800</td><td class="roi-val">8x</td></tr>
+      <tr><td>$400</td><td>$4,800</td><td>$4,800</td><td>$9,600</td><td class="roi-val">16x</td></tr>
+      <tr><td>$675</td><td>$8,100</td><td>$8,100</td><td>$16,200</td><td class="roi-val">27x</td></tr>
+    </table>
+    <p class="body-text" style="margin-top:16px;">Even at $200 per review, 2 deals bring in $4,800. That's 8x your investment. At the mid-range of $400, the same 2 deals return $9,600, a 16x return. And your list now has double the companies to close those deals from.</p>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="label">EVERY LIST INCLUDES</div>
+    <h2>Your outreach starts the day you get the file</h2>
+    <div class="rule"></div>
+    <div class="checklist">
+      <div><span class="check-box">✓</span>Company name, domain, and industry</div>
+      <div><span class="check-box">✓</span>Trustpilot score and rating label</div>
+      <div><span class="check-box">✓</span>Exact bad review text for personalization</div>
+      <div><span class="check-box">✓</span>Decision maker name and title</div>
+      <div><span class="check-box">✓</span>Verified work email address</div>
+      <div><span class="check-box">✓</span>Direct phone or mobile number</div>
+      <div><span class="check-box">✓</span>U.S. companies only, 0 to 500 employees</div>
+      <div><span class="check-box">✓</span>Delivered as CSV, ready to plug into outreach</div>
+    </div>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="label">PROOF, NOT PROMISES</div>
+    <h2>What this list does inside a live campaign</h2>
+    <div class="rule"></div>
+    <div class="case-card">
+      <div class="case-head">
+        <div class="case-title">Trust Campaign — reputation management client, cold email only</div>
+        <div class="case-status">● Active</div>
+      </div>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="num">16,751</div>
+          <div class="lbl">Total leads loaded</div>
+        </div>
+        <div class="case-metric good">
+          <div class="num">340 (2.27%)</div>
+          <div class="lbl">Replies</div>
+        </div>
+        <div class="case-metric good">
+          <div class="num">66 (19.41%)</div>
+          <div class="lbl">Interested, of all replies</div>
+        </div>
+      </div>
+      <p class="body-text" style="margin-top:18px;">14,979 of these leads contacted so far, bounce rate held at 2.28%. This is a live client running on the same data structure you get in every RepuLeads tier, refreshed monthly so the same list keeps producing new interest.</p>
+    </div>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="label">WHY THIS WORKS</div>
+    <h2>The compliance gap your competitors can't touch</h2>
+    <div class="rule"></div>
+    <div class="compliance">
+      <div class="comp-card">
+        <h3>U.S. companies only, by design</h3>
+        <p>We target U.S. businesses specifically because cold email to them is compliant. European companies fall under stricter rules that most agencies can't legally cold email, which means the U.S. market stays wide open while competitors sit on the sidelines.</p>
+      </div>
+      <div class="comp-card">
+        <h3>LinkedIn outreach, when you want it</h3>
+        <p>Want to add a second channel? We run automated LinkedIn outreach on the same decision makers, so you're not relying on email alone to get a reply.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-top">
+  <div class="wrap">
+    <div class="final-cta">
+      <div class="label" style="justify-content:center; display:flex;">LIMITED TIME</div>
+      <h2 style="margin-bottom:12px;">Double the list. Same price. Gone September 1.</h2>
+      <p class="body-text" style="margin: 0 auto 28px;">Pick a tier, get your file within 48 hours to a week depending on size, and start reaching out to companies that are actively bleeding deals over their reviews.</p>
+      <a href="#pricing" class="cta">Claim promo pricing →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  RepuLeads by CrackClay.co — built for reputation management and review removal agencies.
+</footer>
+
+</body>
+</html>
