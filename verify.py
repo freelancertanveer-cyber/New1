@@ -28,13 +28,15 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration
+# Set list_verification_mode=True when verifying existing email lists (no permutation testing)
 CONFIG = {
-    'smtp_timeout': 10,
-    'dns_timeout': 5,
-    'delay_between_domains': 0.5,
-    'delay_between_checks': 0.2,
-    'max_retries': 2,
-    'backoff_multiplier': 2,
+    'smtp_timeout': 5,
+    'dns_timeout': 3,
+    'delay_between_domains': 0.05,
+    'delay_between_checks': 0.01,
+    'max_retries': 1,
+    'backoff_multiplier': 1.5,
+    'list_verification_mode': True,  # Optimized for verifying existing lists (99k/day)
 }
 
 # Email permutation patterns
@@ -243,7 +245,7 @@ def process_csv(input_file: str, output_file: str, max_records: int = None):
                         best_confidence = confidence
                     logger.info(f"  Provided email {provided_email}: {status}")
 
-                if not verified_email and permutations and not is_catchall:
+                if not verified_email and permutations and not is_catchall and not CONFIG['list_verification_mode']:
                     for perm in permutations:
                         status, confidence = verify_email(perm, mx_hosts)
                         if status == "valid":
