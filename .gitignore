@@ -1,1 +1,4 @@
 proposals/amazon_seller_sample_50.csv
+__pycache__/
+*.pyc
+.DS_Store
